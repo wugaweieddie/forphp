@@ -100,12 +100,12 @@
                     </div>
                     <div class="form-group">
                         <label for="" class="form-label">數量</label>
-                        <input type="number" class="form-control" min="0" max="100" id="pnum">
+                        <input type="number" class="form-control" min="0" max="100" id="pnum" name="pnum">
                     </div>
                     <div class="form-group">
                         <label for="" class="form-label" id="showmon">總金額</label>
                     </div>
-                    <button class="btn btn-primary mt-2 w-100" id="ok_btn">訂購</button>
+                    <button class="btn btn-primary mt-2 w-100" id="ok_btn" type="submit">訂購</button>
                 </div>
             </div>
         </div>
@@ -149,43 +149,58 @@
             });
 
             //取得當下日期時間當作訂單編號
-                let time = new Date();
-                let thetime = time.getTime();
-                // console.log(thetime);
-                let datelist = {
-                    year: time.getFullYear(),
-                    month: time.getMonth() + 1,
-                    date: time.getDate(),
-                    minute: time.getMinutes()
-                }
-                let list1 = datelist.year.toString();
-                // console.log(typeof list1, list1);
-                let list2 = datelist.month.toString();
-                let list3 = datelist.date.toString();
-                let list4 = datelist.minute.toString();
-                let listall = list1 + list2 + list3 + list4;
-                // console.log(typeof listall, listall);
-                let alldate=time.toLocaleString();
-                // console.log(typeof alldate);
-                
+            let time = new Date();
+            let thetime = time.getTime();
+            // console.log(thetime);
+            let datelist = {
+                year: time.getFullYear(),
+                month: time.getMonth() + 1,
+                date: time.getDate(),
+                hour: time.getHours(),
+                minute: time.getMinutes()
+            }
+            let list1 = datelist.year.toString();
+            // console.log(typeof list1, list1);
+            let list2 = datelist.month.toString();
+            let list3 = datelist.date.toString();
+            let list4 = datelist.minute.toString();
+            let list5 = datelist.hour.toString();
+            let listall = list1 + list2 + list3 + list5 + list4;
+            // console.log(typeof listall, listall);
+           
+
 
 
             $("#ok_btn").bind("click", function () {
-                let textmon = '請確認訂購數量為:' + numb + '箱\n\n總金額:' + monb + '元\n\n您的訂單編號為:'+listall;
+                let textmon = '請確認訂購數量為:' + numb + '箱\n\n總金額:' + monb + '元\n\n您的訂單編號為:' + listall;
                 confirm(textmon,);
                 let tel = prompt("輸入電話號碼");
                 localStorage.setItem("tel", tel);
                 window.location.replace("./login.html");
-                //將數量金額存到記憶體
-                localStorage.setItem("number", numb);   //數量
-                localStorage.setItem("mon", monb);      //金額
-                localStorage.setItem("list",listall);   //訂單編號
-                localStorage.setItem("data",alldate);   //下訂日期
+                console.log(listall);
+                console.log(tel);
+                console.log($("#pnum").val());
+                console.log(monb);
+
+                 //PHP連線
+            $.ajax({
+                type:"POST",
+                url:"http://192.168.60.12/PP(php)/20231211-Createdb.php",
+                data: {flist:listall,ftel:tel,fcont:$("#pnum").val(),fmon:monb},
+                success: showdata,
+                error : function(){
+                    alert("失敗");
+                }
+            });
+                
             });
 
         });
 
-
+        function showdata(data){
+            console.log(data);
+            alert("新增成功");
+        }
     </script>
 </body>
 

@@ -1,6 +1,6 @@
 // var user = { "listname": "20231204", "tel": "098888111" };
 let listname = localStorage.getItem("list");
-console.log(typeof listname,listname);
+// console.log(typeof listname,listname);
 let tels = localStorage.getItem("tel");
 
 
