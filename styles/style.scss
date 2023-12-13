@@ -1,0 +1,1089 @@
+body,
+html {
+    max-width: 1400px;
+    margin: 0 auto;
+    @import "./header";
+
+
+    // 回最上層按鈕
+    .toTop-arrow {
+        img {
+            width: 10rem;
+            height: 10rem;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            cursor: pointer;
+            position: fixed;
+            right: -1rem;
+            bottom: 1rem;
+            z-index: 99;
+
+        }
+
+        &.hide {
+            transform: translateX(120%);
+        }
+    }
+
+    // 首頁的main
+    .main1 {
+        min-height: 85vw;
+        background-image: url(../images/bg-1.jpg);
+        background-position: center center;
+        background-size: cover;
+
+        // 首頁主要區
+        .container {
+            .row {
+                .section1 {
+                    margin-top: 30px;
+
+                    // 首頁左邊欄位
+                    .content1 {
+                        min-height: 40vw;
+                        background: linear-gradient(330deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+                        border-radius: 10%;
+                        padding-bottom: 10px;
+
+                        .contitle {
+                            margin-top: 10px;
+
+                            h4 {
+                                color: rgb(255, 255, 255);
+                                text-align: center;
+                                font-weight: bolder;
+                                font-size: 2rem;
+                            }
+                        }
+
+                        .row {
+
+                            // min-height: 40vw;
+                            .card {
+                                box-shadow: 5px 5px 5px #ebeb61;
+
+                                .card-body {
+                                    cursor: pointer;
+                                    box-shadow: 0px 3px 5px #3c3c3c;
+
+                                    .cardimg1 {
+                                        background-image: url(../images/fruit2.jpg);
+                                        background-position: center center;
+                                        background-size: cover;
+                                        height: 100px;
+                                    }
+
+                                    .cardimg2 {
+                                        background-image: url(../images/dirver2.png);
+                                        background-position: center center;
+                                        background-size: cover;
+                                        height: 100px;
+                                    }
+
+                                    .cardimg3 {
+                                        background-image: url(../images/fruit5.jpg);
+                                        background-position: center center;
+                                        background-size: cover;
+                                        height: 100px;
+                                    }
+
+                                    .cardimg4 {
+                                        background-image: url(../images/premium.avif);
+                                        background-position: center center;
+                                        background-size: cover;
+                                        height: 100px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // 首頁右邊欄位
+                    .content2 {
+                        min-height: 40vw;
+                        background: linear-gradient(135deg, rgba(207, 116, 11, 0.2), rgba(221, 165, 10, 0.7));
+                        border-radius: 10%;
+                        padding-bottom: 10px;
+
+                        .contitle {
+                            margin-top: 10px;
+
+                            h4 {
+                                color: black;
+                                text-align: center;
+                                font-weight: bolder;
+                                font-size: 2rem;
+                            }
+                        }
+
+                        .col-10 {
+                            min-height: 300;
+                            // border: 1px solid red;
+                            margin: 20px auto;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: start;
+
+                            .conright1 {
+                                min-height: 15vw;
+                                border-radius: 10%;
+                                display: flex;
+                                justify-content: space-around;
+
+                                .context1 {
+                                    max-width: 50%;
+                                    display: flex;
+                                    align-items: center;
+
+                                    p {
+                                        padding: 10px;
+                                        font-weight: bolder;
+                                        font-size: 1.5rem;
+                                        color: var(--mycolor4);
+                                    }
+                                }
+
+                                .pimg {
+                                    border-radius: 10%;
+                                    min-height: 300px;
+                                    width: 400px;
+                                    min-width: 80px;
+                                    overflow: hidden;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    // border: 5px solid white;
+
+                                    img {
+                                        min-height: 300px;
+                                        width: 400px;
+                                        min-width: 80px;
+                                        transition: all 0.8;
+                                        border: 5px solid white;
+                                        border-radius: 10%;
+
+
+                                        &:hover {
+                                            transform: scale(1.2);
+                                        }
+                                    }
+                                }
+                            }
+
+                            .conright2 {
+                                min-height: 15vw;
+                                border-radius: 10%;
+                                display: flex;
+                                flex-direction: row-reverse;
+                                justify-content: space-around;
+
+
+                                .context2 {
+                                    max-width: 50%;
+                                    display: flex;
+                                    align-items: center;
+
+                                    p {
+                                        padding: 10px;
+                                        font-weight: bolder;
+                                        font-size: 1.2rem;
+                                        color: var(--mycolor9);
+                                    }
+                                }
+
+                                .pimg {
+                                    border-radius: 10%;
+                                    min-height: 300px;
+                                    width: 400px;
+                                    min-width: 80px;
+                                    overflow: hidden;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    // border: 5px solid white;
+
+                                    img {
+                                        min-height: 300px;
+                                        width: 400px;
+                                        min-width: 80px;
+                                        transition: all 0.8;
+                                        border: 5px solid white;
+                                        border-radius: 10%;
+
+
+                                        &:hover {
+                                            transform: scale(1.2);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 下面第二塊內容
+            .bottompar {
+
+                // 左邊的內容
+                .section2 {
+                    min-height: 40vw;
+                    // border: 1px solid red;
+
+                    .par2leftimg {
+                        min-height: 20vw;
+                        background-image: url(../images/fruit4.jpg);
+                        opacity: 0.7;
+                        background-position: center center;
+                        background-size: cover;
+                        border-radius: 20%;
+                    }
+
+                    .par2leftbottom {
+                        background: linear-gradient(180deg, rgba(30, 212, 173, 0.2), rgba(206, 194, 194, 0.7)), url(../images/bottombg.jpg);
+                        background-position: center center;
+                        background-size: cover;
+                        min-height: 20vw;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        border-radius: 10px 10px 0 0;
+
+                        .title {
+                            text-align: center;
+                            color: var(--mycolor9);
+                            font-weight: bold;
+                            font-size: 2rem;
+                        }
+
+                        .icon {
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            justify-content: space-around;
+                            align-items: end;
+                            margin-bottom: 10px;
+                            // border: 1px solid red;
+
+                            img {
+                                width: 4vw;
+                                cursor: pointer;
+
+                                &:hover {
+                                    transform: scale(1.2);
+                                }
+                            }
+                        }
+                    }
+
+
+                }
+
+                // 右邊的內容
+                .bottomtextr {
+                    .col-12 {
+                        min-height: 9vw;
+                        background: linear-gradient(to bottom, rgba(206, 209, 40, 0.3), rgba(226, 11, 11, 0.7));
+                        border-radius: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        p {
+                            color: white;
+                            font-size: 1.5rem;
+                            font-weight: 600;
+                            padding: 0 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 關於的main
+    .main2 {
+        background-image: url(../images/big.jpg);
+        min-height: 100vw;
+        background-position: center center;
+        background-size: cover;
+
+        .container {
+            .row {
+
+                .section1 {
+                    display: flex;
+                    flex-direction: row;
+
+                    .box {
+                        min-height: 100vw;
+
+                        .title {
+                            h2 {
+                                text-align: center;
+                                color: var(--mycolor12);
+                                font-size: 3rem;
+                                font-weight: bold;
+                                text-shadow: 0.75rem 0.75rem 0.5rem #d4d11c;
+                            }
+                        }
+
+                        .title2 {
+                            h2 {
+                                text-align: center;
+                                color: var(--mycolor12);
+                                font-size: 3rem;
+                                font-weight: bold;
+                                text-shadow: 0.75rem 0.75rem 0.5rem #d4d11c;
+                            }
+                        }
+
+                        .part1 {
+                            .left {
+                                min-height: 19.5vw;
+
+                                .leftbox {
+                                    min-height: 19.5vw;
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+
+                                    .imgout {
+                                        min-height: 200px;
+                                        min-width: 200px;
+                                        margin: 0 30px;
+                                        border-radius: 50%;
+                                        // border: 1px red solid;
+                                        overflow: hidden;
+
+                                        img {
+                                            border-radius: 50%;
+                                            height: 200px;
+                                            width: 200px;
+
+                                            &:hover {
+                                                transform: scale(1.2);
+                                                transition: 1s;
+                                            }
+                                        }
+
+                                    }
+
+                                    .leftconent {
+                                        padding: 2rem;
+                                        line-height: 2rem;
+                                        font-size: 1.5rem;
+                                        font-weight: bolder;
+                                        background: linear-gradient(150deg, rgba(255, 255, 255, 0.3), rgba(180, 178, 37, 0.842));
+                                        margin-right: 10px;
+                                    }
+                                }
+                            }
+                        }
+
+                        // 右邊時間軸區塊
+                        .row {
+
+                            .part2 {
+
+                                .timeline {
+                                    position: relative;
+
+                                    &::before {
+                                        position: absolute;
+                                        top: 0;
+                                        bottom: 0;
+                                        content: "";
+                                        width: 5px;
+                                        background: linear-gradient(to bottom, rgba(64, 216, 18, 1), rgba(12, 88, 28, 1));
+                                        left: 50%;
+                                        transform: translateX(-50%);
+                                    }
+
+
+                                    .timetext1 {
+                                        position: relative;
+                                        display: flex;
+                                        align-items: center;
+
+                                        &::after {
+                                            position: absolute;
+                                            content: "發芽期";
+                                            top: -3%;
+                                            left: 50%;
+                                            transform: translateX(-50%);
+                                            font-weight: bolder;
+                                            background-color: #3c3c3c;
+                                            color: wheat;
+                                            padding-right: 3px;
+                                            padding-left: 3px;
+                                            border-radius: 5px;
+                                        }
+
+                                    }
+
+                                    .timetext2 {
+                                        position: relative;
+                                        display: flex;
+                                        align-items: center;
+
+                                        &::after {
+                                            position: absolute;
+                                            content: "開花期";
+                                            top: -5%;
+                                            left: 50%;
+                                            transform: translateX(-50%);
+                                            font-weight: bolder;
+                                            background-color: #3c3c3c;
+                                            color: wheat;
+                                            padding-right: 3px;
+                                            padding-left: 3px;
+                                            border-radius: 5px;
+                                        }
+
+                                    }
+
+                                    .timetext3 {
+                                        position: relative;
+                                        display: flex;
+                                        align-items: center;
+
+                                        &::after {
+                                            position: absolute;
+                                            content: "結果期";
+                                            top: -5%;
+                                            left: 50%;
+                                            transform: translateX(-50%);
+                                            font-weight: bolder;
+                                            background-color: #3c3c3c;
+                                            color: wheat;
+                                            padding-right: 3px;
+                                            padding-left: 3px;
+                                            border-radius: 5px;
+                                        }
+
+                                    }
+
+                                    .timetext4 {
+                                        position: relative;
+                                        display: flex;
+                                        align-items: center;
+
+                                        &::after {
+                                            position: absolute;
+                                            content: "成熟期";
+                                            top: -15%;
+                                            left: 50%;
+                                            transform: translateX(-50%);
+                                            font-weight: bolder;
+                                            background-color: #3c3c3c;
+                                            color: wheat;
+                                            padding-right: 3px;
+                                            padding-left: 3px;
+                                            border-radius: 5px;
+                                        }
+
+                                    }
+
+                                    .col-12 {
+                                        align-items: center;
+                                        font-size: 1.25rem;
+
+                                        .img1 {
+                                            min-height: 10vw;
+                                            min-width: 2vw;
+                                            background-image: url(../百香果生長圖片/修過/1.png);
+                                            background-position: center center;
+                                            background-size: cover;
+                                            border-radius: 50%;
+                                            // border: 1px solid red;
+                                        }
+
+                                        .text1 {
+                                            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+                                            border-radius: 0 10% 10% 0;
+                                            color: white;
+                                            // border: 1px solid red;
+                                            padding: 20px 20px;
+                                            font-weight: 500;
+                                        }
+
+                                        .img2 {
+                                            min-height: 10vw;
+                                            min-width: 2vw;
+                                            background-image: url(../百香果生長圖片/2.jpg);
+                                            background-position: center center;
+                                            background-size: cover;
+                                            border-radius: 10%;
+                                            // border: 1px solid red;
+                                        }
+
+                                        .text2 {
+
+                                            color: white;
+                                            // border: 1px solid red;
+                                            padding: 20px 20px;
+                                            font-weight: 500;
+                                            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+                                            border-radius: 10% 0 0 10%;
+                                            min-height: 10vw;
+                                        }
+
+                                        .img3 {
+                                            min-height: 10vw;
+                                            min-width: 2vw;
+                                            background-image: url(../百香果生長圖片/3.jpg);
+                                            background-position: center center;
+                                            background-size: cover;
+                                            border-radius: 50%;
+                                            // border: 1px solid red;
+                                        }
+
+                                        .text3 {
+                                            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+                                            border-radius: 0 10% 10% 0;
+                                            color: white;
+                                            // border: 1px solid red;
+                                            padding: 20px 20px;
+                                            font-weight: 500;
+                                        }
+
+                                        .img4 {
+                                            min-height: 10vw;
+                                            min-width: 2vw;
+                                            background-image: url(../百香果生長圖片/4.jpg);
+                                            background-position: bottom center;
+                                            background-size: cover;
+                                            border-radius: 10%;
+                                            // border: 1px solid red;
+                                        }
+
+                                        .text4 {
+
+                                            color: white;
+                                            // border: 1px solid red;
+                                            padding: 20px 20px;
+                                            font-weight: 500;
+                                            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+                                            border-radius: 10% 0 0 10%;
+                                            min-height: 10vw;
+                                        }
+                                    }
+
+                                }
+
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    // 產品訂購的main
+    .main3 {
+        .my-3 {
+            align-items: center;
+
+            .attention-area {
+                opacity: 0;
+                transition: 2s;
+                .toptext {
+                    background: rgba($color: #000000, $alpha: 0.2);
+                    border-radius: 20%;
+
+                    h3 {
+                        text-align: center;
+                        font-weight: bolder;
+                    }
+
+                    ul {
+                        li {
+                            line-height: 2rem;
+                            font-size: 1rem;
+                            font-weight: 800;
+                            list-style: lower-roman;
+
+                            span {
+                                color: var(--mycolor14);
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //    下面商品區
+        .my-2 {
+            .row {
+                .mb-3 {
+                    .card {
+                        border: 2px solid var(--mycolor13);
+                        background: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.7));
+
+                        .card-head {
+                            text-align: center;
+                            padding-top: 0.5rem;
+
+                            h4 {
+                                color: var(--mycolor12);
+                                font-weight: bolder;
+                            }
+                        }
+
+                        .card-body {
+                            p {
+                                margin-top: 10px;
+                                font-weight: 900;
+                            }
+
+                            .pimg1:hover {
+                                content: url("../images/修過/p4.png");           
+                            }
+                            .pimg2:hover {
+                                content: url("../images/修過/p5.png");           
+                            }
+                            .pimg3:hover {
+                                content: url("../images/修過/p6.png");           
+                            }
+                            .pimg4:hover {
+                                content: url("../images/修過/p7.png");           
+                            }
+                            .pimg5:hover {
+                                content: url("../images/修過/p8.png");           
+                            }
+                            .pimg6:hover {
+                                content: url("../images/修過/p9.png");           
+                            }
+                            .pimg7:hover {
+                                content: url("../images/修過/p10.png");           
+                            }
+                        }
+
+                        .card-footer {
+                            text-align: center;
+
+                        }
+                        &:hover{
+                            box-shadow: 5px 5px 5px black;
+                            transform: skew(-2deg);
+                            transition: 0.3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 聯絡我們的main
+    .main4 {
+        background: linear-gradient(160deg, var(--mycolor1), var(--mycolor12));
+        min-height: 70vw;
+
+        .container {
+            .sectionI {
+                .top-l {
+                    .col-12 {
+                        .mt-3 {
+                            .span1 {
+                                font-weight: bolder;
+                                font-size: 1.7rem;
+                                font-family: 標楷體;
+                            }
+
+                            .span2 {
+                                font-size: 1.4rem;
+                                font-family: 標楷體;
+                            }
+
+                            img {
+                                max-width: 60px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .sectionII {
+                .mid-r {
+                    display: flex;
+                    align-items: center;
+
+                    .imababy1,
+                    .imababy2,
+                    .imababy3,
+                    .imababy4 {
+                        width: 10vw;
+                        height: 10vw;
+                    }
+
+                    .imababy1 {
+                        transform: rotate(45deg);
+                        animation: open 6s linear infinite;
+                    }
+
+                    .imababy2 {
+                        transform: rotate(330deg);
+                        animation: open 3s linear infinite;
+                    }
+
+                    .imababy3 {
+                        transform: rotate(330deg);
+                        animation: open 2s linear infinite;
+                    }
+
+                    .imababy4 {
+                        transform: rotate(45deg);
+                        animation: open 7s alternate infinite;
+                    }
+
+                    @keyframes open {
+                        0% {
+                            opacity: 0;
+                            transform: translateX(0);
+                            transform: translateY(-10%);
+                        }
+
+                        25% {
+                            opacity: 0.4;
+                            transform: translateX(10%);
+                            transform: translateY(-20%);
+                        }
+
+                        50% {
+                            opacity: 0.6;
+                            transform: translateX(20%);
+                            transform: translateY(-25%);
+                        }
+
+                        75% {
+                            opacity: 0.8;
+                            transform: translateX(-10%);
+
+                        }
+
+                        100% {
+                            opacity: 1;
+                            transform: translateX(20%);
+
+                        }
+                    }
+                }
+            }
+
+            .sectionIII {
+                margin-top: 10%;
+                overflow: hidden;
+
+                .cards {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    animation: marquee 20s linear infinite;
+
+                    &:hover {
+                        animation-play-state: paused;
+                    }
+
+                    .cartcontent {
+                        .card {
+                            .card-head {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+
+                                h4 {
+                                    margin-top: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                @keyframes marquee {
+                    0% {
+                        transform: translateX(0);
+                    }
+
+                    100% {
+                        transform: translateX(-100%);
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    // 產品選購內頁
+    .main5 {
+        background: linear-gradient(330deg,var(--mycolor8),var(--mycolor12));
+        padding-bottom: 3%;
+        .banner {
+            height: 20vh;
+            background-image: url(../images/修過/banner.png);
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .container {
+            .title{
+                h3{
+                    .texten{
+                        color: rgb(105, 101, 101);
+                        text-shadow: 2px 2px 2px white;
+                    }
+                }
+            }
+            .row {
+                .col-md-8 {
+                    .pimg {
+                        height: 35vw;
+                        background: url(../images/title.jpg);
+                        background-position: center center;
+                        background-size: cover;
+                    }
+                }
+
+                .col-md-4 {
+                    .mytext {
+                        h3 {
+                            border-bottom: 3px solid red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+   //登入後清單
+    .main6{
+        .container{
+            .row{
+                table{
+                    thead{
+                        tr{
+                            th{
+                                font-size: 1.5rem;
+                                line-height: 1rem;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            td{
+                                font-size: 1.25rem;
+                                line-height: 2rem;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 頁尾
+    .footer {
+        min-height: 3vw;
+        background-color: bisque;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        
+
+        p {
+            color: var(--mycolor3);
+            font-size: 1rem;
+        }
+    }
+
+}
+
+
+
+
+
+// 響應式
+@media screen and (max-width:992px) {
+    body {
+        header {
+            nav {
+                .logo {
+                    .navbar-brand {
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            width: 20vw;
+                        }
+
+                        .logotext {
+                            display: block;
+                            color: var(--mycolor7);
+                            font-size: 2rem;
+                            font-weight: bolder;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        // 關於我們版面
+        .main2 {
+            .section1 {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                .rightbox {
+
+                    // background: linear-gradient(0deg,rgba(255, 255, 255, 0.2),rgba(0,0,0,0.7));
+                    .row {
+                        .part2 {
+                            .timeline {
+                                .sbox {
+
+                                    .simg {
+                                        height: 30vw;
+                                        width: 30vw;
+                                        border-radius: 0%;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+// 首頁內容區
+@media screen and (max-width:768px) {
+    main {
+        .container {
+            .bottompar {
+                display: flex;
+                flex-direction: column-reverse;
+
+                .section2 {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: end;
+
+                    .par2leftimg {
+                        display: none;
+                    }
+
+                    .par2leftbottom {
+                        .icon {
+                            img {
+                                min-width: 10vw;
+                            }
+                        }
+                    }
+                }
+
+                .bottomtextr {
+                    .col-12 {
+                        margin-top: 30px;
+
+                    }
+                }
+            }
+        }
+    }
+
+    // 關於我們
+    .main2 {
+        .section1 {
+            .leftbox1 {
+                .part1 {
+                    .left {
+                        .leftbox {
+                            display: flex;
+                            flex-direction: column;
+                            flex-wrap: wrap;
+                        }
+                    }
+                }
+            }
+
+            // 右邊版面
+            .rightbox {
+                background-color: transparent;
+
+                .row {
+                    .part2 {
+                        .timeline {
+                            background-color: transparent;
+
+                            .sbox {
+                                background-color: transparent;
+
+                                .simg {
+                                    display: none;
+                                }
+
+                            }
+
+                            &::before {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 聯絡我們
+    .main4 {
+        .container {
+            .sectionI {
+                .top-r {
+                    .center {
+                        margin: 0 auto;
+                    }
+                }
+
+            }
+            .sectionII{
+                .mid-r{
+                    display: none !important;
+                }
+            }
+        }
+    }
+    //登入後清單
+    .main6{
+        .container{
+            .row{
+                table{
+                    thead{
+                        display: none;
+                    }
+                    tbody{
+                        tr{
+                            td{
+                                display: block;
+                                &::before{
+                                    content: attr(data-th) ":";
+                                    color:var(--mycolor8);
+                                    font-weight: 600;
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+ // 選單列
+ header {
+   
+
+    nav {
+
+        .logo {
+            .navbar-brand {
+
+                // 左邊LOGO大小
+                img {
+                    width: 8vw;
+                }
+
+                .logotext {
+                    display: none;
+                }
+            }
+
+            .collapse {
+                .navbar-nav {
+                    a {
+                        font-size: 1.5rem;
+                        font-weight: bolder;
+                        color: var(--mycolor7);
+                        margin-right: 40px;
+                        position: relative;
+
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: -3px;
+                            width: 0px;
+                            height: 2px;
+                            background-color: red;
+                            transition: width 0.8s ease;
+                        }
+                        &:hover::after{
+                            width: 100%;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 照片輪播
+.carousel {
+    .carousel-inner {
+        .carousel-item {
+            img {
+                height: 100vh;
+            }
+        }
+    }
+}

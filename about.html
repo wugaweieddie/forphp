@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百香果B2C｜關於我們</title>
+    <link rel="stylesheet" href="./styles/myall.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- 回上層按鈕 -->
+    <div id="backtop" class="toTop-arrow">
+        <img src="./images/LOGO.png">
+    </div>
+    <!-- 選單列 -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-secondary">
+            <div class="container-fluid logo">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./images/LOGO.png" alt="百香果B2C">
+                    <p class="logotext">百香果B2C</p>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" aria-current="page" href="./index.html">百香果B2C</a>
+                        <a class="nav-link text-danger" href="./about.html" target="_self">關於我們</a>
+                        <a class="nav-link" href="./product.html" target="_self">商品訂購</a>
+                        <a class="nav-link" href="./contactus.html" target="_self">聯絡我們</a>
+                        <a class="nav-link" href="#" type="button" data-bs-toggle="modal"
+                            data-bs-target="#suflist">訂單查詢</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- 登入彈出介面 -->
+    <div class="modal fade" id="suflist">
+        <!--讓上面的超連接來連結-->
+        <div class="modal-dialog">
+            <!--彈出框框-->
+            <div class="modal-content">
+                <!-- header -->
+                <div class="modal-header">
+                    <h3>訂單查詢</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- body -->
+                <div class="modal-body">
+                    <div>
+                        <div class="mb-3 username">
+                            <label for="" class="form-label">訂單編號</label>
+                            <input id="listname" type="text" class="form-control " placeholder="請輸入訂單編號">
+                        </div>
+                        <div class="mb-3 usermimi">
+                            <label for="tel" class="form-label">電話</label>
+                            <input id="tel" type="text" class="form-control" placeholder="請輸入電話號碼">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">購買日期</label>
+                            <input type="date" name="" id="buyday" class="form-control">
+                        </div>
+                        <div class="form-check form-switch">
+                            <input type="checkbox" class="form-check-input" role="switch" name="sw1" id="sw1">
+                            <label class="form-check-label" for="sw1">未確認資料</label>
+                        </div>
+                        <button id="OK_btn" class="btn btn-info" style="width: 100%;">確認</button>
+                    </div>
+                </div>
+                <!-- footer -->
+                <div class="modal-footer">
+                    <a href="#" type="button">聯絡客服</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class="main2">
+        <div class="container">
+            <div class="row">
+                <div class="my-3 section1">
+                    <!-- 左邊區塊 -->
+                    <div class="col-lg-6 box leftbox1">
+                        <div class="title mt-3">
+                            <h2>百香果團隊介紹</h2>
+                        </div>
+                        <div class="part1">
+                            <div class="col-12 left">
+                                <div class="leftbox">
+                                    <div class="imgout">
+                                        <img class="left-img" src="./images/farmer1.jpg">
+                                    </div>
+                                    <div class="leftconent">
+                                        透過B2C模式，我可以建立自己的品牌。直接與消費者互動有助於提高產品的知名度和品牌價值。可以通過行銷策略、網絡宣傳等方式直接推廣自己的品牌，吸引更多消費者。
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 left">
+                                <div class="leftbox d-flex flex-row-reverse">
+                                    <div class="imgout"><img class="left-img" src="./images/farmer2.jpg">
+                                    </div>
+                                    <div class="leftconent">
+                                        透過B2C模式，農夫可以直接將農產品銷售給消費者，從而確保食物的品質和新鮮度。這對營養師來說很重要，因為新鮮、高品質的農作物能夠提供更多營養價值，符合健康飲食的需求。
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 left">
+                                <div class="leftbox">
+                                    <div class="imgout"><img class="left-img" src="./images/farmer3.jpg">
+                                    </div>
+                                    <div class="leftconent">
+                                        新鮮度是購買農產品時最重要的考慮因素之一。B2C模式通常意味著直接從農夫處購買，這意味著農產品的新鮮度可能會比從其他渠道購買的產品更高。
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 left">
+                                <div class="leftbox d-flex flex-row-reverse">
+                                    <div class="imgout"> <img class="left-img" src="./images/farmer4.jpg">
+                                    </div>
+                                    <div class="leftconent">
+                                        B2C模式通常意味著農產品直接從農夫處銷售給消費者，縮短了產品的供應鏈。這樣一來，不需要經過多個中間商或長途運輸，減少了運輸距離和相應的碳排放量，有助於降低環境負擔。
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 left">
+                                <div class="leftbox">
+                                    <div class="imgout"> <img class="left-img" src="./images/farmer5.jpg">
+                                    </div>
+                                    <div class="leftconent">
+                                        B2C模式削減了中間商在農產品供應鏈中的角色。農夫可以直接與最終消費者進行交易，從而消除了部分中間商的利潤和影響，直接受益的是生產者和消費者。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 右邊區塊 -->
+                    <div class="col-lg-6 box rightbox">
+                        <div class="title2 my-3">
+                            <h2>百香果生長過程</h2>
+                        </div>
+                        <div class="row">
+                            <div class="part2">
+                                <div class="timeline">
+                                    <!-- 右一 -->
+                                    <div class="col-12">
+                                        <div class="timetext1  d-flex flex-row mb-4 sbox">
+                                            <div class="col-md-6">
+                                                <div class="img1 mx-3 simg"></div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="text1">
+                                                    播種完之後，把花盆放在照散射光的位置，每天適量澆水，保持盆土溼潤。大概10天左右後會進入發芽期，百香果種子會長出幼芽。幼芽漸漸成長到幼苗這段時間爲生長期，待幼苗再長高一點，會有雜草跟幼苗爭搶養分，需要及時除草。還可以施1次肥，有利於植物開花結果。
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 右二 -->
+                                    <div class="col-12">
+                                        <div class="timetext2  d-flex flex-row-reverse mb-4 sbox">
+                                            <div class="col-md-6">
+                                                <div class="img2 mx-3 simg"></div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="text2">
+                                                    在5月份左右，百香果的幼苗已經長大，莖藤也長的很長，上面長有茂密的葉子。這時需要用竹棍等工具插在百香果根部附近，供百香果的藤蔓纏繞生長。這個時候百香果已經進入開花期，再過20天左右，藤蔓上便會陸陸續續長出花朵。
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 右三 -->
+                                    <div class="col-12">
+                                        <div class="timetext3  d-flex flex-row mb-4 sbox">
+                                            <div class="col-md-6">
+                                                <div class="img3 mx-3 simg"></div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="text3">
+                                                    百香果在開花期間，會有蜜蜂等昆蟲爲百香果花朵授粉，授粉後百香果便進入結果期。一般在5天左右會長出幼小的果子，果實爲綠色。
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 右四 -->
+                                    <div class="col-12">
+                                        <div class="timetext4  d-flex flex-row-reverse mb-4 sbox">
+                                            <div class="col-md-6">
+                                                <div class="img4 mx-3 simg"></div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="text4">
+                                                    再生長一段時間，到7月份左右，果實便會進入成熟期，成熟後的果實從綠色變成紅色，散發着淡淡的香氣。
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <!-- 頁尾 -->
+    <footer class="footer">
+        <div>
+            <p>Copyright © 2023 GaWei. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/Jquery.js"></script>
+    <script src="./js/list.js"></script>
+    <script>
+        // 回最上層按鈕
+        $(function () {
+            $("#backtop").click(function () {
+                console.log("ok");
+                $("html,body").animate({ scrollTop: 0 }, 333);
+            });
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 300) {
+                    $("#backtop").fadeIn(222);
+                } else {
+                    $("#backtop").stop().fadeOut(222);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
