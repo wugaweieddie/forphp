@@ -1,9 +1,9 @@
 <?php
    
     $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "testdb";
+    $username = "admin";
+    $password = "eddie205";
+    $dbname = "waterfood";
 
     try{
         //建立連線
@@ -11,7 +11,7 @@
         //設定錯誤顯示模式
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         //設定mysql指令
-        $stmt = $conn->prepare("SELECT ID,Pname,Price,Pnum,Premark,Creat_at FROM product");
+        $stmt = $conn->prepare("SELECT ID,flist,fdate,ftel,fcont,fmon FROM food");
         //執行mysql指令
         $stmt->execute();
         //設定讀取出來的資料轉成陣列

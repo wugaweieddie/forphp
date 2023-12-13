@@ -105,15 +105,15 @@
                             <th>總金額</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td id="fulist" data-th="訂單編號"></td>
-                            <td id="fudate" data-th="訂購日期"></td>
-                            <td id="futel" data-th="電話"></td>
+                    <tbody id="show">
+                        <tr >
+                            <td id="fulist" data-th="訂單編號">XXXX</td>
+                            <td id="fudate" data-th="訂購日期">XXXX</td>
+                            <td id="futel" data-th="電話">XXXX</td>
                             <td><button class="btn btn-info me-2" id="btn-change1">修改</button></td>
-                            <td id="fruit" data-th="訂單內容"></td>
+                            <td id="fruit" data-th="訂單內容">XXXX</td>
                             <td><button class="btn btn-info me-2" id="btn-change2">修改</button></td>
-                            <td id="monmon" data-th="總金額"></td>
+                            <td id="monmon" data-th="總金額">XXXX</td>
                         </tr>
                     </tbody>
                 </table>
@@ -137,83 +137,27 @@
 
 
     <script>
-        let alldate = localStorage.getItem("data");
-        let list;
-        let mon;
-        let number;
-        let tel;
-        // 回最上層按鈕
-        $(function () {
-            // $("#backtop").click(function () {
-            //     console.log("ok");
-            //     $("html,body").animate({ scrollTop: 0 }, 333);
-            // });
-            // $(window).scroll(function () {
-            //     if ($(this).scrollTop() > 300) {
-            //         $("#backtop").fadeIn(222);
-            //     } else {
-            //         $("#backtop").stop().fadeOut(222);
-            //     }
-            // });
-
-
-            //表格
-            number = Number(localStorage.getItem("number"));
-            // console.log(typeof number,number);
-            // let mon = Number(localStorage.getItem("mon"));
-            mon = number * 500;
-            // console.log(typeof mon ,mon);
-            //從瀏覽器接回資料秀到表單中
-            tel = localStorage.getItem("tel");
-            // console.log(tel);
-            list = localStorage.getItem("list");
-            // console.log(list);
-
-
-            $("#fruit").html("百香果:" + number + "箱");
-            $("#monmon").html(mon + "元");
-            $("#fulist").text(list);
-            $("#futel").html(tel);
-            $("#fudate").text(alldate);
-            let strhtml = '<span style="color: red;">訂單的客戶歡迎回來</span>';
-            $("#visitor").html("<h3>" + list + strhtml + "</h3>");
-
-
-            //刪除按鈕
-            $("#btn-reset").bind("click", function () {
-                let yes = confirm("確定要刪除嗎");
-                console.log(yes);
-                if (yes == true) {
-                    localStorage.clear();
-                    window.location.replace("./login.html");
+        $(function(){
+            $.ajax({
+                type:"GET",
+                url:"http://192.168.60.12/PP(php)/20231211-Readdb.php",
+                dataType:"json",
+                success :showdata,
+                error:function(){
+                    alert("錯誤");
                 }
             });
-            //修改電話按鈕
-            $("#btn-change1").bind("click", function () {
-                let tel = prompt("輸入修改電話");
-                if (tel == null) {
-                    alert("請輸入修改電話");
-                } else {
-                    localStorage.setItem("tel", tel);
-                    window.location.replace("./login.html");
-                }
-
-
-            });
-            //修改訂單內容按鈕
-            $("#btn-change2").bind("click", function () {
-                let number = prompt("輸入修改數量");
-                if (number == null) {
-                    alert("請輸入修改數量");
-                } else {
-                    localStorage.setItem("number", number);
-                    window.location.replace("./login.html");
-                }
-
-            });
-
-
         });
+        function showdata(data){
+            // console.log(data);
+            $("#show").empty();
+            data.forEach(function(item){
+                // console.log(item.flist);
+                let strhtml = '<tr><td id="fulist" data-th="訂單編號">'+item.flist+'</td><td id="fudate" data-th="訂購日期">'+item.fdate+'</td><td id="futel" data-th="電話">'+item.ftel+'</td><td><button class="btn btn-info me-2" id="btn-change1">修改</button></td><td id="fruit" data-th="訂單內容">'+item.fcont+'</td><td><button class="btn btn-info me-2" id="btn-change2">修改</button></td><td id="monmon" data-th="總金額">'+item.fmon+'</td></tr>';
+
+                $("#show").append(strhtml);
+            });
+        }
     </script>
 </body>
 
