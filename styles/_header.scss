@@ -57,3 +57,16 @@
         }
     }
 }
+
+
+@media screen and (max-width:768px) {
+    .carousel {
+        .carousel-inner {
+            .carousel-item {
+                img {
+                    height: 50vh;
+                }
+            }
+        }
+    }
+}

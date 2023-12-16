@@ -39,6 +39,12 @@ body .carousel .carousel-inner .carousel-item img,
 html .carousel .carousel-inner .carousel-item img {
   height: 100vh;
 }
+@media screen and (max-width: 768px) {
+  body .carousel .carousel-inner .carousel-item img,
+  html .carousel .carousel-inner .carousel-item img {
+    height: 50vh;
+  }
+}
 body .toTop-arrow img,
 html .toTop-arrow img {
   width: 10rem;
@@ -762,12 +768,28 @@ html .main5 .container .title h3 .texten {
   color: rgb(105, 101, 101);
   text-shadow: 2px 2px 2px white;
 }
-body .main5 .container .row .col-md-8 .pimg,
-html .main5 .container .row .col-md-8 .pimg {
-  height: 35vw;
-  background: url(../images/title.jpg);
-  background-position: center center;
-  background-size: cover;
+body .main5 .container .row .col-md-8 .iframes,
+html .main5 .container .row .col-md-8 .iframes {
+  height: 30vw;
+  display: flex;
+  justify-content: center;
+}
+body .main5 .container .row .col-md-8 .iframes iframe,
+html .main5 .container .row .col-md-8 .iframes iframe {
+  border: 2px solid red;
+}
+body .main5 .container .row .col-md-8 .iframes-imges,
+html .main5 .container .row .col-md-8 .iframes-imges {
+  height: 20vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+}
+body .main5 .container .row .col-md-8 .iframes-imges img,
+html .main5 .container .row .col-md-8 .iframes-imges img {
+  height: 80%;
+  width: 80%;
 }
 body .main5 .container .row .col-md-4 .mytext h3,
 html .main5 .container .row .col-md-4 .mytext h3 {
