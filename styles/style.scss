@@ -839,25 +839,39 @@ html {
             }
             .row {
                 .col-md-8 {
-                    .iframes{
-                        height: 30vw;
+                    .iframes {
+                        height: 25vw;
                         display: flex;
                         justify-content: center;
-                        iframe{
-                            border: 2px solid  red;
-                            
-                        }
                     }
-                    .iframes-imges{
+
+                    .iframes-imges {
                         height: 20vw;
+                        margin-top: 10px;
                         display: flex;
                         justify-content: space-around;
                         align-items: center;
-                        margin-top: 10px;
-                        img{
-                            height: 80%;
-                            width: 80%;
+
+                        a {
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+
+                            img {
+                                height: 80%;
+                                width: 80%;
+                                border-radius: 20%;
+                                &:hover{
+                                    border: 5px solid white;
+                                }
+                            }
+                            &:hover{
+                                opacity: 0.7;
+                                
+                            }
                         }
+
+
                     }
                 }
 

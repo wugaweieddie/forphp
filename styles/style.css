@@ -770,26 +770,37 @@ html .main5 .container .title h3 .texten {
 }
 body .main5 .container .row .col-md-8 .iframes,
 html .main5 .container .row .col-md-8 .iframes {
-  height: 30vw;
+  height: 25vw;
   display: flex;
   justify-content: center;
-}
-body .main5 .container .row .col-md-8 .iframes iframe,
-html .main5 .container .row .col-md-8 .iframes iframe {
-  border: 2px solid red;
 }
 body .main5 .container .row .col-md-8 .iframes-imges,
 html .main5 .container .row .col-md-8 .iframes-imges {
   height: 20vw;
+  margin-top: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 10px;
 }
-body .main5 .container .row .col-md-8 .iframes-imges img,
-html .main5 .container .row .col-md-8 .iframes-imges img {
+body .main5 .container .row .col-md-8 .iframes-imges a,
+html .main5 .container .row .col-md-8 .iframes-imges a {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body .main5 .container .row .col-md-8 .iframes-imges a img,
+html .main5 .container .row .col-md-8 .iframes-imges a img {
   height: 80%;
   width: 80%;
+  border-radius: 20%;
+}
+body .main5 .container .row .col-md-8 .iframes-imges a img:hover,
+html .main5 .container .row .col-md-8 .iframes-imges a img:hover {
+  border: 5px solid white;
+}
+body .main5 .container .row .col-md-8 .iframes-imges a:hover,
+html .main5 .container .row .col-md-8 .iframes-imges a:hover {
+  opacity: 0.7;
 }
 body .main5 .container .row .col-md-4 .mytext h3,
 html .main5 .container .row .col-md-4 .mytext h3 {
