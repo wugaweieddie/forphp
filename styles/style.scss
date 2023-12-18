@@ -1,5 +1,4 @@
-body,
-html {
+html,body {
     max-width: 1400px;
     margin: 0 auto;
     @import "./header";
@@ -1085,6 +1084,19 @@ html {
             .sectionII{
                 .mid-r{
                     display: none !important;
+                }
+            }
+        }
+    }
+    // 購買頁面
+    .main5{
+        .container{
+            .row{
+                .col-md-8{
+                    .iframes{
+                        height: 80vw !important;
+                        
+                    }
                 }
             }
         }

@@ -1,27 +1,22 @@
 @charset "UTF-8";
-body,
-html {
+html, body {
   max-width: 1400px;
   margin: 0 auto;
 }
-body header nav .logo .navbar-brand img,
-html header nav .logo .navbar-brand img {
+html header nav .logo .navbar-brand img, body header nav .logo .navbar-brand img {
   width: 8vw;
 }
-body header nav .logo .navbar-brand .logotext,
-html header nav .logo .navbar-brand .logotext {
+html header nav .logo .navbar-brand .logotext, body header nav .logo .navbar-brand .logotext {
   display: none;
 }
-body header nav .logo .collapse .navbar-nav a,
-html header nav .logo .collapse .navbar-nav a {
+html header nav .logo .collapse .navbar-nav a, body header nav .logo .collapse .navbar-nav a {
   font-size: 1.5rem;
   font-weight: bolder;
   color: var(--mycolor7);
   margin-right: 40px;
   position: relative;
 }
-body header nav .logo .collapse .navbar-nav a::after,
-html header nav .logo .collapse .navbar-nav a::after {
+html header nav .logo .collapse .navbar-nav a::after, body header nav .logo .collapse .navbar-nav a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -31,22 +26,18 @@ html header nav .logo .collapse .navbar-nav a::after {
   background-color: red;
   transition: width 0.8s ease;
 }
-body header nav .logo .collapse .navbar-nav a:hover::after,
-html header nav .logo .collapse .navbar-nav a:hover::after {
+html header nav .logo .collapse .navbar-nav a:hover::after, body header nav .logo .collapse .navbar-nav a:hover::after {
   width: 100%;
 }
-body .carousel .carousel-inner .carousel-item img,
-html .carousel .carousel-inner .carousel-item img {
+html .carousel .carousel-inner .carousel-item img, body .carousel .carousel-inner .carousel-item img {
   height: 100vh;
 }
 @media screen and (max-width: 768px) {
-  body .carousel .carousel-inner .carousel-item img,
-  html .carousel .carousel-inner .carousel-item img {
+  html .carousel .carousel-inner .carousel-item img, body .carousel .carousel-inner .carousel-item img {
     height: 50vh;
   }
 }
-body .toTop-arrow img,
-html .toTop-arrow img {
+html .toTop-arrow img, body .toTop-arrow img {
   width: 10rem;
   height: 10rem;
   padding: 0;
@@ -58,124 +49,104 @@ html .toTop-arrow img {
   bottom: 1rem;
   z-index: 99;
 }
-body .toTop-arrow.hide,
-html .toTop-arrow.hide {
+html .toTop-arrow.hide, body .toTop-arrow.hide {
   transform: translateX(120%);
 }
-body .main1,
-html .main1 {
+html .main1, body .main1 {
   min-height: 85vw;
   background-image: url(../images/bg-1.jpg);
   background-position: center center;
   background-size: cover;
 }
-body .main1 .container .row .section1,
-html .main1 .container .row .section1 {
+html .main1 .container .row .section1, body .main1 .container .row .section1 {
   margin-top: 30px;
 }
-body .main1 .container .row .section1 .content1,
-html .main1 .container .row .section1 .content1 {
+html .main1 .container .row .section1 .content1, body .main1 .container .row .section1 .content1 {
   min-height: 40vw;
   background: linear-gradient(330deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
   border-radius: 10%;
   padding-bottom: 10px;
 }
-body .main1 .container .row .section1 .content1 .contitle,
-html .main1 .container .row .section1 .content1 .contitle {
+html .main1 .container .row .section1 .content1 .contitle, body .main1 .container .row .section1 .content1 .contitle {
   margin-top: 10px;
 }
-body .main1 .container .row .section1 .content1 .contitle h4,
-html .main1 .container .row .section1 .content1 .contitle h4 {
+html .main1 .container .row .section1 .content1 .contitle h4, body .main1 .container .row .section1 .content1 .contitle h4 {
   color: rgb(255, 255, 255);
   text-align: center;
   font-weight: bolder;
   font-size: 2rem;
 }
-body .main1 .container .row .section1 .content1 .row .card,
-html .main1 .container .row .section1 .content1 .row .card {
+html .main1 .container .row .section1 .content1 .row .card, body .main1 .container .row .section1 .content1 .row .card {
   box-shadow: 5px 5px 5px #ebeb61;
 }
-body .main1 .container .row .section1 .content1 .row .card .card-body,
-html .main1 .container .row .section1 .content1 .row .card .card-body {
+html .main1 .container .row .section1 .content1 .row .card .card-body, body .main1 .container .row .section1 .content1 .row .card .card-body {
   cursor: pointer;
   box-shadow: 0px 3px 5px #3c3c3c;
 }
-body .main1 .container .row .section1 .content1 .row .card .card-body .cardimg1,
-html .main1 .container .row .section1 .content1 .row .card .card-body .cardimg1 {
+html .main1 .container .row .section1 .content1 .row .card .card-body .cardimg1, body .main1 .container .row .section1 .content1 .row .card .card-body .cardimg1 {
   background-image: url(../images/fruit2.jpg);
   background-position: center center;
   background-size: cover;
   height: 100px;
 }
-body .main1 .container .row .section1 .content1 .row .card .card-body .cardimg2,
-html .main1 .container .row .section1 .content1 .row .card .card-body .cardimg2 {
+html .main1 .container .row .section1 .content1 .row .card .card-body .cardimg2, body .main1 .container .row .section1 .content1 .row .card .card-body .cardimg2 {
   background-image: url(../images/dirver2.png);
   background-position: center center;
   background-size: cover;
   height: 100px;
 }
-body .main1 .container .row .section1 .content1 .row .card .card-body .cardimg3,
-html .main1 .container .row .section1 .content1 .row .card .card-body .cardimg3 {
+html .main1 .container .row .section1 .content1 .row .card .card-body .cardimg3, body .main1 .container .row .section1 .content1 .row .card .card-body .cardimg3 {
   background-image: url(../images/fruit5.jpg);
   background-position: center center;
   background-size: cover;
   height: 100px;
 }
-body .main1 .container .row .section1 .content1 .row .card .card-body .cardimg4,
-html .main1 .container .row .section1 .content1 .row .card .card-body .cardimg4 {
+html .main1 .container .row .section1 .content1 .row .card .card-body .cardimg4, body .main1 .container .row .section1 .content1 .row .card .card-body .cardimg4 {
   background-image: url(../images/premium.avif);
   background-position: center center;
   background-size: cover;
   height: 100px;
 }
-body .main1 .container .row .section1 .content2,
-html .main1 .container .row .section1 .content2 {
+html .main1 .container .row .section1 .content2, body .main1 .container .row .section1 .content2 {
   min-height: 40vw;
   background: linear-gradient(135deg, rgba(207, 116, 11, 0.2), rgba(221, 165, 10, 0.7));
   border-radius: 10%;
   padding-bottom: 10px;
 }
-body .main1 .container .row .section1 .content2 .contitle,
-html .main1 .container .row .section1 .content2 .contitle {
+html .main1 .container .row .section1 .content2 .contitle, body .main1 .container .row .section1 .content2 .contitle {
   margin-top: 10px;
 }
-body .main1 .container .row .section1 .content2 .contitle h4,
-html .main1 .container .row .section1 .content2 .contitle h4 {
+html .main1 .container .row .section1 .content2 .contitle h4, body .main1 .container .row .section1 .content2 .contitle h4 {
   color: black;
   text-align: center;
   font-weight: bolder;
   font-size: 2rem;
 }
-body .main1 .container .row .section1 .content2 .col-10,
-html .main1 .container .row .section1 .content2 .col-10 {
+html .main1 .container .row .section1 .content2 .col-10, body .main1 .container .row .section1 .content2 .col-10 {
   min-height: 300;
   margin: 20px auto;
   display: flex;
   flex-direction: column;
   justify-content: start;
 }
-body .main1 .container .row .section1 .content2 .col-10 .conright1,
-html .main1 .container .row .section1 .content2 .col-10 .conright1 {
+html .main1 .container .row .section1 .content2 .col-10 .conright1, body .main1 .container .row .section1 .content2 .col-10 .conright1 {
   min-height: 15vw;
   border-radius: 10%;
   display: flex;
   justify-content: space-around;
 }
-body .main1 .container .row .section1 .content2 .col-10 .conright1 .context1,
-html .main1 .container .row .section1 .content2 .col-10 .conright1 .context1 {
+html .main1 .container .row .section1 .content2 .col-10 .conright1 .context1, body .main1 .container .row .section1 .content2 .col-10 .conright1 .context1 {
   max-width: 50%;
   display: flex;
   align-items: center;
 }
-body .main1 .container .row .section1 .content2 .col-10 .conright1 .context1 p,
-html .main1 .container .row .section1 .content2 .col-10 .conright1 .context1 p {
+html .main1 .container .row .section1 .content2 .col-10 .conright1 .context1 p, body .main1 .container .row .section1 .content2 .col-10 .conright1 .context1 p {
   padding: 10px;
   font-weight: bolder;
   font-size: 1.5rem;
   color: var(--mycolor4);
 }
-body .main1 .container .row .section1 .content2 .col-10 .conright1 .pimg,
-html .main1 .container .row .section1 .content2 .col-10 .conright1 .pimg {
+html .main1 .container .row .section1 .content2 .col-10 .conright1 .pimg, body .main1 .container .row .section1 .content2 .col-10 .conright1 .pimg {
   border-radius: 10%;
   min-height: 300px;
   width: 400px;
@@ -185,8 +156,7 @@ html .main1 .container .row .section1 .content2 .col-10 .conright1 .pimg {
   justify-content: center;
   align-items: center;
 }
-body .main1 .container .row .section1 .content2 .col-10 .conright1 .pimg img,
-html .main1 .container .row .section1 .content2 .col-10 .conright1 .pimg img {
+html .main1 .container .row .section1 .content2 .col-10 .conright1 .pimg img, body .main1 .container .row .section1 .content2 .col-10 .conright1 .pimg img {
   min-height: 300px;
   width: 400px;
   min-width: 80px;
@@ -194,33 +164,28 @@ html .main1 .container .row .section1 .content2 .col-10 .conright1 .pimg img {
   border: 5px solid white;
   border-radius: 10%;
 }
-body .main1 .container .row .section1 .content2 .col-10 .conright1 .pimg img:hover,
-html .main1 .container .row .section1 .content2 .col-10 .conright1 .pimg img:hover {
+html .main1 .container .row .section1 .content2 .col-10 .conright1 .pimg img:hover, body .main1 .container .row .section1 .content2 .col-10 .conright1 .pimg img:hover {
   transform: scale(1.2);
 }
-body .main1 .container .row .section1 .content2 .col-10 .conright2,
-html .main1 .container .row .section1 .content2 .col-10 .conright2 {
+html .main1 .container .row .section1 .content2 .col-10 .conright2, body .main1 .container .row .section1 .content2 .col-10 .conright2 {
   min-height: 15vw;
   border-radius: 10%;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
 }
-body .main1 .container .row .section1 .content2 .col-10 .conright2 .context2,
-html .main1 .container .row .section1 .content2 .col-10 .conright2 .context2 {
+html .main1 .container .row .section1 .content2 .col-10 .conright2 .context2, body .main1 .container .row .section1 .content2 .col-10 .conright2 .context2 {
   max-width: 50%;
   display: flex;
   align-items: center;
 }
-body .main1 .container .row .section1 .content2 .col-10 .conright2 .context2 p,
-html .main1 .container .row .section1 .content2 .col-10 .conright2 .context2 p {
+html .main1 .container .row .section1 .content2 .col-10 .conright2 .context2 p, body .main1 .container .row .section1 .content2 .col-10 .conright2 .context2 p {
   padding: 10px;
   font-weight: bolder;
   font-size: 1.2rem;
   color: var(--mycolor9);
 }
-body .main1 .container .row .section1 .content2 .col-10 .conright2 .pimg,
-html .main1 .container .row .section1 .content2 .col-10 .conright2 .pimg {
+html .main1 .container .row .section1 .content2 .col-10 .conright2 .pimg, body .main1 .container .row .section1 .content2 .col-10 .conright2 .pimg {
   border-radius: 10%;
   min-height: 300px;
   width: 400px;
@@ -230,8 +195,7 @@ html .main1 .container .row .section1 .content2 .col-10 .conright2 .pimg {
   justify-content: center;
   align-items: center;
 }
-body .main1 .container .row .section1 .content2 .col-10 .conright2 .pimg img,
-html .main1 .container .row .section1 .content2 .col-10 .conright2 .pimg img {
+html .main1 .container .row .section1 .content2 .col-10 .conright2 .pimg img, body .main1 .container .row .section1 .content2 .col-10 .conright2 .pimg img {
   min-height: 300px;
   width: 400px;
   min-width: 80px;
@@ -239,16 +203,13 @@ html .main1 .container .row .section1 .content2 .col-10 .conright2 .pimg img {
   border: 5px solid white;
   border-radius: 10%;
 }
-body .main1 .container .row .section1 .content2 .col-10 .conright2 .pimg img:hover,
-html .main1 .container .row .section1 .content2 .col-10 .conright2 .pimg img:hover {
+html .main1 .container .row .section1 .content2 .col-10 .conright2 .pimg img:hover, body .main1 .container .row .section1 .content2 .col-10 .conright2 .pimg img:hover {
   transform: scale(1.2);
 }
-body .main1 .container .bottompar .section2,
-html .main1 .container .bottompar .section2 {
+html .main1 .container .bottompar .section2, body .main1 .container .bottompar .section2 {
   min-height: 40vw;
 }
-body .main1 .container .bottompar .section2 .par2leftimg,
-html .main1 .container .bottompar .section2 .par2leftimg {
+html .main1 .container .bottompar .section2 .par2leftimg, body .main1 .container .bottompar .section2 .par2leftimg {
   min-height: 20vw;
   background-image: url(../images/fruit4.jpg);
   opacity: 0.7;
@@ -256,8 +217,7 @@ html .main1 .container .bottompar .section2 .par2leftimg {
   background-size: cover;
   border-radius: 20%;
 }
-body .main1 .container .bottompar .section2 .par2leftbottom,
-html .main1 .container .bottompar .section2 .par2leftbottom {
+html .main1 .container .bottompar .section2 .par2leftbottom, body .main1 .container .bottompar .section2 .par2leftbottom {
   background: linear-gradient(180deg, rgba(30, 212, 173, 0.2), rgba(206, 194, 194, 0.7)), url(../images/bottombg.jpg);
   background-position: center center;
   background-size: cover;
@@ -267,15 +227,13 @@ html .main1 .container .bottompar .section2 .par2leftbottom {
   justify-content: space-between;
   border-radius: 10px 10px 0 0;
 }
-body .main1 .container .bottompar .section2 .par2leftbottom .title,
-html .main1 .container .bottompar .section2 .par2leftbottom .title {
+html .main1 .container .bottompar .section2 .par2leftbottom .title, body .main1 .container .bottompar .section2 .par2leftbottom .title {
   text-align: center;
   color: var(--mycolor9);
   font-weight: bold;
   font-size: 2rem;
 }
-body .main1 .container .bottompar .section2 .par2leftbottom .icon,
-html .main1 .container .bottompar .section2 .par2leftbottom .icon {
+html .main1 .container .bottompar .section2 .par2leftbottom .icon, body .main1 .container .bottompar .section2 .par2leftbottom .icon {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -283,17 +241,14 @@ html .main1 .container .bottompar .section2 .par2leftbottom .icon {
   align-items: end;
   margin-bottom: 10px;
 }
-body .main1 .container .bottompar .section2 .par2leftbottom .icon img,
-html .main1 .container .bottompar .section2 .par2leftbottom .icon img {
+html .main1 .container .bottompar .section2 .par2leftbottom .icon img, body .main1 .container .bottompar .section2 .par2leftbottom .icon img {
   width: 4vw;
   cursor: pointer;
 }
-body .main1 .container .bottompar .section2 .par2leftbottom .icon img:hover,
-html .main1 .container .bottompar .section2 .par2leftbottom .icon img:hover {
+html .main1 .container .bottompar .section2 .par2leftbottom .icon img:hover, body .main1 .container .bottompar .section2 .par2leftbottom .icon img:hover {
   transform: scale(1.2);
 }
-body .main1 .container .bottompar .bottomtextr .col-12,
-html .main1 .container .bottompar .bottomtextr .col-12 {
+html .main1 .container .bottompar .bottomtextr .col-12, body .main1 .container .bottompar .bottomtextr .col-12 {
   min-height: 9vw;
   background: linear-gradient(to bottom, rgba(206, 209, 40, 0.3), rgba(226, 11, 11, 0.7));
   border-radius: 20px;
@@ -301,77 +256,65 @@ html .main1 .container .bottompar .bottomtextr .col-12 {
   flex-direction: column;
   justify-content: center;
 }
-body .main1 .container .bottompar .bottomtextr .col-12 p,
-html .main1 .container .bottompar .bottomtextr .col-12 p {
+html .main1 .container .bottompar .bottomtextr .col-12 p, body .main1 .container .bottompar .bottomtextr .col-12 p {
   color: white;
   font-size: 1.5rem;
   font-weight: 600;
   padding: 0 20px;
 }
-body .main2,
-html .main2 {
+html .main2, body .main2 {
   background-image: url(../images/big.jpg);
   min-height: 100vw;
   background-position: center center;
   background-size: cover;
 }
-body .main2 .container .row .section1,
-html .main2 .container .row .section1 {
+html .main2 .container .row .section1, body .main2 .container .row .section1 {
   display: flex;
   flex-direction: row;
 }
-body .main2 .container .row .section1 .box,
-html .main2 .container .row .section1 .box {
+html .main2 .container .row .section1 .box, body .main2 .container .row .section1 .box {
   min-height: 100vw;
 }
-body .main2 .container .row .section1 .box .title h2,
-html .main2 .container .row .section1 .box .title h2 {
+html .main2 .container .row .section1 .box .title h2, body .main2 .container .row .section1 .box .title h2 {
   text-align: center;
   color: var(--mycolor12);
   font-size: 3rem;
   font-weight: bold;
   text-shadow: 0.75rem 0.75rem 0.5rem #d4d11c;
 }
-body .main2 .container .row .section1 .box .title2 h2,
-html .main2 .container .row .section1 .box .title2 h2 {
+html .main2 .container .row .section1 .box .title2 h2, body .main2 .container .row .section1 .box .title2 h2 {
   text-align: center;
   color: var(--mycolor12);
   font-size: 3rem;
   font-weight: bold;
   text-shadow: 0.75rem 0.75rem 0.5rem #d4d11c;
 }
-body .main2 .container .row .section1 .box .part1 .left,
-html .main2 .container .row .section1 .box .part1 .left {
+html .main2 .container .row .section1 .box .part1 .left, body .main2 .container .row .section1 .box .part1 .left {
   min-height: 19.5vw;
 }
-body .main2 .container .row .section1 .box .part1 .left .leftbox,
-html .main2 .container .row .section1 .box .part1 .left .leftbox {
+html .main2 .container .row .section1 .box .part1 .left .leftbox, body .main2 .container .row .section1 .box .part1 .left .leftbox {
   min-height: 19.5vw;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-body .main2 .container .row .section1 .box .part1 .left .leftbox .imgout,
-html .main2 .container .row .section1 .box .part1 .left .leftbox .imgout {
+html .main2 .container .row .section1 .box .part1 .left .leftbox .imgout, body .main2 .container .row .section1 .box .part1 .left .leftbox .imgout {
   min-height: 200px;
   min-width: 200px;
   margin: 0 30px;
   border-radius: 50%;
   overflow: hidden;
 }
-body .main2 .container .row .section1 .box .part1 .left .leftbox .imgout img,
-html .main2 .container .row .section1 .box .part1 .left .leftbox .imgout img {
+html .main2 .container .row .section1 .box .part1 .left .leftbox .imgout img, body .main2 .container .row .section1 .box .part1 .left .leftbox .imgout img {
   border-radius: 50%;
   height: 200px;
   width: 200px;
 }
-body .main2 .container .row .section1 .box .part1 .left .leftbox .imgout img:hover,
-html .main2 .container .row .section1 .box .part1 .left .leftbox .imgout img:hover {
+html .main2 .container .row .section1 .box .part1 .left .leftbox .imgout img:hover, body .main2 .container .row .section1 .box .part1 .left .leftbox .imgout img:hover {
   transform: scale(1.2);
   transition: 1s;
 }
-body .main2 .container .row .section1 .box .part1 .left .leftbox .leftconent,
-html .main2 .container .row .section1 .box .part1 .left .leftbox .leftconent {
+html .main2 .container .row .section1 .box .part1 .left .leftbox .leftconent, body .main2 .container .row .section1 .box .part1 .left .leftbox .leftconent {
   padding: 2rem;
   line-height: 2rem;
   font-size: 1.5rem;
@@ -379,12 +322,10 @@ html .main2 .container .row .section1 .box .part1 .left .leftbox .leftconent {
   background: linear-gradient(150deg, rgba(255, 255, 255, 0.3), rgba(180, 178, 37, 0.842));
   margin-right: 10px;
 }
-body .main2 .container .row .section1 .box .row .part2 .timeline,
-html .main2 .container .row .section1 .box .row .part2 .timeline {
+html .main2 .container .row .section1 .box .row .part2 .timeline, body .main2 .container .row .section1 .box .row .part2 .timeline {
   position: relative;
 }
-body .main2 .container .row .section1 .box .row .part2 .timeline::before,
-html .main2 .container .row .section1 .box .row .part2 .timeline::before {
+html .main2 .container .row .section1 .box .row .part2 .timeline::before, body .main2 .container .row .section1 .box .row .part2 .timeline::before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -394,14 +335,12 @@ html .main2 .container .row .section1 .box .row .part2 .timeline::before {
   left: 50%;
   transform: translateX(-50%);
 }
-body .main2 .container .row .section1 .box .row .part2 .timeline .timetext1,
-html .main2 .container .row .section1 .box .row .part2 .timeline .timetext1 {
+html .main2 .container .row .section1 .box .row .part2 .timeline .timetext1, body .main2 .container .row .section1 .box .row .part2 .timeline .timetext1 {
   position: relative;
   display: flex;
   align-items: center;
 }
-body .main2 .container .row .section1 .box .row .part2 .timeline .timetext1::after,
-html .main2 .container .row .section1 .box .row .part2 .timeline .timetext1::after {
+html .main2 .container .row .section1 .box .row .part2 .timeline .timetext1::after, body .main2 .container .row .section1 .box .row .part2 .timeline .timetext1::after {
   position: absolute;
   content: "發芽期";
   top: -3%;
@@ -414,14 +353,12 @@ html .main2 .container .row .section1 .box .row .part2 .timeline .timetext1::aft
   padding-left: 3px;
   border-radius: 5px;
 }
-body .main2 .container .row .section1 .box .row .part2 .timeline .timetext2,
-html .main2 .container .row .section1 .box .row .part2 .timeline .timetext2 {
+html .main2 .container .row .section1 .box .row .part2 .timeline .timetext2, body .main2 .container .row .section1 .box .row .part2 .timeline .timetext2 {
   position: relative;
   display: flex;
   align-items: center;
 }
-body .main2 .container .row .section1 .box .row .part2 .timeline .timetext2::after,
-html .main2 .container .row .section1 .box .row .part2 .timeline .timetext2::after {
+html .main2 .container .row .section1 .box .row .part2 .timeline .timetext2::after, body .main2 .container .row .section1 .box .row .part2 .timeline .timetext2::after {
   position: absolute;
   content: "開花期";
   top: -5%;
@@ -434,14 +371,12 @@ html .main2 .container .row .section1 .box .row .part2 .timeline .timetext2::aft
   padding-left: 3px;
   border-radius: 5px;
 }
-body .main2 .container .row .section1 .box .row .part2 .timeline .timetext3,
-html .main2 .container .row .section1 .box .row .part2 .timeline .timetext3 {
+html .main2 .container .row .section1 .box .row .part2 .timeline .timetext3, body .main2 .container .row .section1 .box .row .part2 .timeline .timetext3 {
   position: relative;
   display: flex;
   align-items: center;
 }
-body .main2 .container .row .section1 .box .row .part2 .timeline .timetext3::after,
-html .main2 .container .row .section1 .box .row .part2 .timeline .timetext3::after {
+html .main2 .container .row .section1 .box .row .part2 .timeline .timetext3::after, body .main2 .container .row .section1 .box .row .part2 .timeline .timetext3::after {
   position: absolute;
   content: "結果期";
   top: -5%;
@@ -454,14 +389,12 @@ html .main2 .container .row .section1 .box .row .part2 .timeline .timetext3::aft
   padding-left: 3px;
   border-radius: 5px;
 }
-body .main2 .container .row .section1 .box .row .part2 .timeline .timetext4,
-html .main2 .container .row .section1 .box .row .part2 .timeline .timetext4 {
+html .main2 .container .row .section1 .box .row .part2 .timeline .timetext4, body .main2 .container .row .section1 .box .row .part2 .timeline .timetext4 {
   position: relative;
   display: flex;
   align-items: center;
 }
-body .main2 .container .row .section1 .box .row .part2 .timeline .timetext4::after,
-html .main2 .container .row .section1 .box .row .part2 .timeline .timetext4::after {
+html .main2 .container .row .section1 .box .row .part2 .timeline .timetext4::after, body .main2 .container .row .section1 .box .row .part2 .timeline .timetext4::after {
   position: absolute;
   content: "成熟期";
   top: -15%;
@@ -474,13 +407,11 @@ html .main2 .container .row .section1 .box .row .part2 .timeline .timetext4::aft
   padding-left: 3px;
   border-radius: 5px;
 }
-body .main2 .container .row .section1 .box .row .part2 .timeline .col-12,
-html .main2 .container .row .section1 .box .row .part2 .timeline .col-12 {
+html .main2 .container .row .section1 .box .row .part2 .timeline .col-12, body .main2 .container .row .section1 .box .row .part2 .timeline .col-12 {
   align-items: center;
   font-size: 1.25rem;
 }
-body .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .img1,
-html .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .img1 {
+html .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .img1, body .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .img1 {
   min-height: 10vw;
   min-width: 2vw;
   background-image: url(../百香果生長圖片/修過/1.png);
@@ -488,16 +419,14 @@ html .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .img1 {
   background-size: cover;
   border-radius: 50%;
 }
-body .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .text1,
-html .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .text1 {
+html .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .text1, body .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .text1 {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
   border-radius: 0 10% 10% 0;
   color: white;
   padding: 20px 20px;
   font-weight: 500;
 }
-body .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .img2,
-html .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .img2 {
+html .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .img2, body .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .img2 {
   min-height: 10vw;
   min-width: 2vw;
   background-image: url(../百香果生長圖片/2.jpg);
@@ -505,8 +434,7 @@ html .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .img2 {
   background-size: cover;
   border-radius: 10%;
 }
-body .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .text2,
-html .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .text2 {
+html .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .text2, body .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .text2 {
   color: white;
   padding: 20px 20px;
   font-weight: 500;
@@ -514,8 +442,7 @@ html .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .text2 
   border-radius: 10% 0 0 10%;
   min-height: 10vw;
 }
-body .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .img3,
-html .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .img3 {
+html .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .img3, body .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .img3 {
   min-height: 10vw;
   min-width: 2vw;
   background-image: url(../百香果生長圖片/3.jpg);
@@ -523,16 +450,14 @@ html .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .img3 {
   background-size: cover;
   border-radius: 50%;
 }
-body .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .text3,
-html .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .text3 {
+html .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .text3, body .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .text3 {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
   border-radius: 0 10% 10% 0;
   color: white;
   padding: 20px 20px;
   font-weight: 500;
 }
-body .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .img4,
-html .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .img4 {
+html .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .img4, body .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .img4 {
   min-height: 10vw;
   min-width: 2vw;
   background-image: url(../百香果生長圖片/4.jpg);
@@ -540,8 +465,7 @@ html .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .img4 {
   background-size: cover;
   border-radius: 10%;
 }
-body .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .text4,
-html .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .text4 {
+html .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .text4, body .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .text4 {
   color: white;
   padding: 20px 20px;
   font-weight: 500;
@@ -549,147 +473,118 @@ html .main2 .container .row .section1 .box .row .part2 .timeline .col-12 .text4 
   border-radius: 10% 0 0 10%;
   min-height: 10vw;
 }
-body .main3 .my-3,
-html .main3 .my-3 {
+html .main3 .my-3, body .main3 .my-3 {
   align-items: center;
 }
-body .main3 .my-3 .attention-area,
-html .main3 .my-3 .attention-area {
+html .main3 .my-3 .attention-area, body .main3 .my-3 .attention-area {
   opacity: 0;
   transition: 2s;
 }
-body .main3 .my-3 .attention-area .toptext,
-html .main3 .my-3 .attention-area .toptext {
+html .main3 .my-3 .attention-area .toptext, body .main3 .my-3 .attention-area .toptext {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 20%;
 }
-body .main3 .my-3 .attention-area .toptext h3,
-html .main3 .my-3 .attention-area .toptext h3 {
+html .main3 .my-3 .attention-area .toptext h3, body .main3 .my-3 .attention-area .toptext h3 {
   text-align: center;
   font-weight: bolder;
 }
-body .main3 .my-3 .attention-area .toptext ul li,
-html .main3 .my-3 .attention-area .toptext ul li {
+html .main3 .my-3 .attention-area .toptext ul li, body .main3 .my-3 .attention-area .toptext ul li {
   line-height: 2rem;
   font-size: 1rem;
   font-weight: 800;
   list-style: lower-roman;
 }
-body .main3 .my-3 .attention-area .toptext ul li span,
-html .main3 .my-3 .attention-area .toptext ul li span {
+html .main3 .my-3 .attention-area .toptext ul li span, body .main3 .my-3 .attention-area .toptext ul li span {
   color: var(--mycolor14);
 }
-body .main3 .my-2 .row .mb-3 .card,
-html .main3 .my-2 .row .mb-3 .card {
+html .main3 .my-2 .row .mb-3 .card, body .main3 .my-2 .row .mb-3 .card {
   border: 2px solid var(--mycolor13);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.7));
 }
-body .main3 .my-2 .row .mb-3 .card .card-head,
-html .main3 .my-2 .row .mb-3 .card .card-head {
+html .main3 .my-2 .row .mb-3 .card .card-head, body .main3 .my-2 .row .mb-3 .card .card-head {
   text-align: center;
   padding-top: 0.5rem;
 }
-body .main3 .my-2 .row .mb-3 .card .card-head h4,
-html .main3 .my-2 .row .mb-3 .card .card-head h4 {
+html .main3 .my-2 .row .mb-3 .card .card-head h4, body .main3 .my-2 .row .mb-3 .card .card-head h4 {
   color: var(--mycolor12);
   font-weight: bolder;
 }
-body .main3 .my-2 .row .mb-3 .card .card-body p,
-html .main3 .my-2 .row .mb-3 .card .card-body p {
+html .main3 .my-2 .row .mb-3 .card .card-body p, body .main3 .my-2 .row .mb-3 .card .card-body p {
   margin-top: 10px;
   font-weight: 900;
 }
-body .main3 .my-2 .row .mb-3 .card .card-body .pimg1:hover,
-html .main3 .my-2 .row .mb-3 .card .card-body .pimg1:hover {
+html .main3 .my-2 .row .mb-3 .card .card-body .pimg1:hover, body .main3 .my-2 .row .mb-3 .card .card-body .pimg1:hover {
   content: url("../images/修過/p4.png");
 }
-body .main3 .my-2 .row .mb-3 .card .card-body .pimg2:hover,
-html .main3 .my-2 .row .mb-3 .card .card-body .pimg2:hover {
+html .main3 .my-2 .row .mb-3 .card .card-body .pimg2:hover, body .main3 .my-2 .row .mb-3 .card .card-body .pimg2:hover {
   content: url("../images/修過/p5.png");
 }
-body .main3 .my-2 .row .mb-3 .card .card-body .pimg3:hover,
-html .main3 .my-2 .row .mb-3 .card .card-body .pimg3:hover {
+html .main3 .my-2 .row .mb-3 .card .card-body .pimg3:hover, body .main3 .my-2 .row .mb-3 .card .card-body .pimg3:hover {
   content: url("../images/修過/p6.png");
 }
-body .main3 .my-2 .row .mb-3 .card .card-body .pimg4:hover,
-html .main3 .my-2 .row .mb-3 .card .card-body .pimg4:hover {
+html .main3 .my-2 .row .mb-3 .card .card-body .pimg4:hover, body .main3 .my-2 .row .mb-3 .card .card-body .pimg4:hover {
   content: url("../images/修過/p7.png");
 }
-body .main3 .my-2 .row .mb-3 .card .card-body .pimg5:hover,
-html .main3 .my-2 .row .mb-3 .card .card-body .pimg5:hover {
+html .main3 .my-2 .row .mb-3 .card .card-body .pimg5:hover, body .main3 .my-2 .row .mb-3 .card .card-body .pimg5:hover {
   content: url("../images/修過/p8.png");
 }
-body .main3 .my-2 .row .mb-3 .card .card-body .pimg6:hover,
-html .main3 .my-2 .row .mb-3 .card .card-body .pimg6:hover {
+html .main3 .my-2 .row .mb-3 .card .card-body .pimg6:hover, body .main3 .my-2 .row .mb-3 .card .card-body .pimg6:hover {
   content: url("../images/修過/p9.png");
 }
-body .main3 .my-2 .row .mb-3 .card .card-body .pimg7:hover,
-html .main3 .my-2 .row .mb-3 .card .card-body .pimg7:hover {
+html .main3 .my-2 .row .mb-3 .card .card-body .pimg7:hover, body .main3 .my-2 .row .mb-3 .card .card-body .pimg7:hover {
   content: url("../images/修過/p10.png");
 }
-body .main3 .my-2 .row .mb-3 .card .card-footer,
-html .main3 .my-2 .row .mb-3 .card .card-footer {
+html .main3 .my-2 .row .mb-3 .card .card-footer, body .main3 .my-2 .row .mb-3 .card .card-footer {
   text-align: center;
 }
-body .main3 .my-2 .row .mb-3 .card:hover,
-html .main3 .my-2 .row .mb-3 .card:hover {
+html .main3 .my-2 .row .mb-3 .card:hover, body .main3 .my-2 .row .mb-3 .card:hover {
   box-shadow: 5px 5px 5px black;
   transform: skew(-2deg);
   transition: 0.3s;
 }
-body .main4,
-html .main4 {
+html .main4, body .main4 {
   background: linear-gradient(160deg, var(--mycolor1), var(--mycolor12));
   min-height: 70vw;
 }
-body .main4 .container .sectionI .top-l .col-12 .mt-3 .span1,
-html .main4 .container .sectionI .top-l .col-12 .mt-3 .span1 {
+html .main4 .container .sectionI .top-l .col-12 .mt-3 .span1, body .main4 .container .sectionI .top-l .col-12 .mt-3 .span1 {
   font-weight: bolder;
   font-size: 1.7rem;
   font-family: 標楷體;
 }
-body .main4 .container .sectionI .top-l .col-12 .mt-3 .span2,
-html .main4 .container .sectionI .top-l .col-12 .mt-3 .span2 {
+html .main4 .container .sectionI .top-l .col-12 .mt-3 .span2, body .main4 .container .sectionI .top-l .col-12 .mt-3 .span2 {
   font-size: 1.4rem;
   font-family: 標楷體;
 }
-body .main4 .container .sectionI .top-l .col-12 .mt-3 img,
-html .main4 .container .sectionI .top-l .col-12 .mt-3 img {
+html .main4 .container .sectionI .top-l .col-12 .mt-3 img, body .main4 .container .sectionI .top-l .col-12 .mt-3 img {
   max-width: 60px;
 }
-body .main4 .container .sectionII .mid-r,
-html .main4 .container .sectionII .mid-r {
+html .main4 .container .sectionII .mid-r, body .main4 .container .sectionII .mid-r {
   display: flex;
   align-items: center;
 }
-body .main4 .container .sectionII .mid-r .imababy1,
-body .main4 .container .sectionII .mid-r .imababy2,
-body .main4 .container .sectionII .mid-r .imababy3,
-body .main4 .container .sectionII .mid-r .imababy4,
 html .main4 .container .sectionII .mid-r .imababy1,
 html .main4 .container .sectionII .mid-r .imababy2,
 html .main4 .container .sectionII .mid-r .imababy3,
-html .main4 .container .sectionII .mid-r .imababy4 {
+html .main4 .container .sectionII .mid-r .imababy4, body .main4 .container .sectionII .mid-r .imababy1,
+body .main4 .container .sectionII .mid-r .imababy2,
+body .main4 .container .sectionII .mid-r .imababy3,
+body .main4 .container .sectionII .mid-r .imababy4 {
   width: 10vw;
   height: 10vw;
 }
-body .main4 .container .sectionII .mid-r .imababy1,
-html .main4 .container .sectionII .mid-r .imababy1 {
+html .main4 .container .sectionII .mid-r .imababy1, body .main4 .container .sectionII .mid-r .imababy1 {
   transform: rotate(45deg);
   animation: open 6s linear infinite;
 }
-body .main4 .container .sectionII .mid-r .imababy2,
-html .main4 .container .sectionII .mid-r .imababy2 {
+html .main4 .container .sectionII .mid-r .imababy2, body .main4 .container .sectionII .mid-r .imababy2 {
   transform: rotate(330deg);
   animation: open 3s linear infinite;
 }
-body .main4 .container .sectionII .mid-r .imababy3,
-html .main4 .container .sectionII .mid-r .imababy3 {
+html .main4 .container .sectionII .mid-r .imababy3, body .main4 .container .sectionII .mid-r .imababy3 {
   transform: rotate(330deg);
   animation: open 2s linear infinite;
 }
-body .main4 .container .sectionII .mid-r .imababy4,
-html .main4 .container .sectionII .mid-r .imababy4 {
+html .main4 .container .sectionII .mid-r .imababy4, body .main4 .container .sectionII .mid-r .imababy4 {
   transform: rotate(45deg);
   animation: open 7s alternate infinite;
 }
@@ -718,29 +613,24 @@ html .main4 .container .sectionII .mid-r .imababy4 {
     transform: translateX(20%);
   }
 }
-body .main4 .container .sectionIII,
-html .main4 .container .sectionIII {
+html .main4 .container .sectionIII, body .main4 .container .sectionIII {
   margin-top: 10%;
   overflow: hidden;
 }
-body .main4 .container .sectionIII .cards,
-html .main4 .container .sectionIII .cards {
+html .main4 .container .sectionIII .cards, body .main4 .container .sectionIII .cards {
   display: flex;
   flex-wrap: nowrap;
   animation: marquee 20s linear infinite;
 }
-body .main4 .container .sectionIII .cards:hover,
-html .main4 .container .sectionIII .cards:hover {
+html .main4 .container .sectionIII .cards:hover, body .main4 .container .sectionIII .cards:hover {
   animation-play-state: paused;
 }
-body .main4 .container .sectionIII .cards .cartcontent .card .card-head,
-html .main4 .container .sectionIII .cards .cartcontent .card .card-head {
+html .main4 .container .sectionIII .cards .cartcontent .card .card-head, body .main4 .container .sectionIII .cards .cartcontent .card .card-head {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-body .main4 .container .sectionIII .cards .cartcontent .card .card-head h4,
-html .main4 .container .sectionIII .cards .cartcontent .card .card-head h4 {
+html .main4 .container .sectionIII .cards .cartcontent .card .card-head h4, body .main4 .container .sectionIII .cards .cartcontent .card .card-head h4 {
   margin-top: 15px;
 }
 @keyframes marquee {
@@ -751,75 +641,62 @@ html .main4 .container .sectionIII .cards .cartcontent .card .card-head h4 {
     transform: translateX(-100%);
   }
 }
-body .main5,
-html .main5 {
+html .main5, body .main5 {
   background: linear-gradient(330deg, var(--mycolor8), var(--mycolor12));
   padding-bottom: 3%;
 }
-body .main5 .banner,
-html .main5 .banner {
+html .main5 .banner, body .main5 .banner {
   height: 20vh;
   background-image: url(../images/修過/banner.png);
   background-position: center center;
   background-size: cover;
 }
-body .main5 .container .title h3 .texten,
-html .main5 .container .title h3 .texten {
+html .main5 .container .title h3 .texten, body .main5 .container .title h3 .texten {
   color: rgb(105, 101, 101);
   text-shadow: 2px 2px 2px white;
 }
-body .main5 .container .row .col-md-8 .iframes,
-html .main5 .container .row .col-md-8 .iframes {
+html .main5 .container .row .col-md-8 .iframes, body .main5 .container .row .col-md-8 .iframes {
   height: 25vw;
   display: flex;
   justify-content: center;
 }
-body .main5 .container .row .col-md-8 .iframes-imges,
-html .main5 .container .row .col-md-8 .iframes-imges {
+html .main5 .container .row .col-md-8 .iframes-imges, body .main5 .container .row .col-md-8 .iframes-imges {
   height: 20vw;
   margin-top: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-body .main5 .container .row .col-md-8 .iframes-imges a,
-html .main5 .container .row .col-md-8 .iframes-imges a {
+html .main5 .container .row .col-md-8 .iframes-imges a, body .main5 .container .row .col-md-8 .iframes-imges a {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-body .main5 .container .row .col-md-8 .iframes-imges a img,
-html .main5 .container .row .col-md-8 .iframes-imges a img {
+html .main5 .container .row .col-md-8 .iframes-imges a img, body .main5 .container .row .col-md-8 .iframes-imges a img {
   height: 80%;
   width: 80%;
   border-radius: 20%;
 }
-body .main5 .container .row .col-md-8 .iframes-imges a img:hover,
-html .main5 .container .row .col-md-8 .iframes-imges a img:hover {
+html .main5 .container .row .col-md-8 .iframes-imges a img:hover, body .main5 .container .row .col-md-8 .iframes-imges a img:hover {
   border: 5px solid white;
 }
-body .main5 .container .row .col-md-8 .iframes-imges a:hover,
-html .main5 .container .row .col-md-8 .iframes-imges a:hover {
+html .main5 .container .row .col-md-8 .iframes-imges a:hover, body .main5 .container .row .col-md-8 .iframes-imges a:hover {
   opacity: 0.7;
 }
-body .main5 .container .row .col-md-4 .mytext h3,
-html .main5 .container .row .col-md-4 .mytext h3 {
+html .main5 .container .row .col-md-4 .mytext h3, body .main5 .container .row .col-md-4 .mytext h3 {
   border-bottom: 3px solid red;
 }
-body .main6 .container .row table thead tr th,
-html .main6 .container .row table thead tr th {
+html .main6 .container .row table thead tr th, body .main6 .container .row table thead tr th {
   font-size: 1.5rem;
   line-height: 1rem;
   text-align: center;
 }
-body .main6 .container .row table tbody tr td,
-html .main6 .container .row table tbody tr td {
+html .main6 .container .row table tbody tr td, body .main6 .container .row table tbody tr td {
   font-size: 1.25rem;
   line-height: 2rem;
   text-align: center;
 }
-body .footer,
-html .footer {
+html .footer, body .footer {
   min-height: 3vw;
   background-color: bisque;
   display: flex;
@@ -827,8 +704,7 @@ html .footer {
   align-items: center;
   justify-content: center;
 }
-body .footer p,
-html .footer p {
+html .footer p, body .footer p {
   color: var(--mycolor3);
   font-size: 1rem;
 }
@@ -903,6 +779,9 @@ html .footer p {
   }
   .main4 .container .sectionII .mid-r {
     display: none !important;
+  }
+  .main5 .container .row .col-md-8 .iframes {
+    height: 80vw !important;
   }
   .main6 .container .row table thead {
     display: none;
