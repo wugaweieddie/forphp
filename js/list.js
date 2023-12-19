@@ -45,15 +45,15 @@ $(function () {
 
 
     //管理者登入
-    $.ajax({
-        type:"GET",
-        url:"./20231211-Readdb2.php",
-        dataType:"json",
-        success :showdata2,
-        error:function(){
-            alert("錯誤");
-        }
-    });
+    // $.ajax({
+    //     type:"GET",
+    //     url:"./20231211-Readdb2.php",
+    //     dataType:"json",
+    //     success :showdata2,
+    //     error:function(){
+    //         alert("錯誤");
+    //     }
+    // });
 
 });
 
