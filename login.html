@@ -96,7 +96,7 @@
     <main class="main6">
         <div class="container">
             <div class="row">
-                <div class="welcome mt-5" id="visitor">訪客</div>
+                <div class="welcome mt-5" id="visitor">商家</div>
                 <table class="table table-active table-bordered mt-5">
                     <thead class="table-dark">
                         <tr>
@@ -157,7 +157,7 @@
             $("#show").empty();
             data.forEach(function(item){
                 // console.log(item.flist);
-                let strhtml = '<tr><td id="fulist" data-th="訂單編號">'+item.flist+'</td><td id="fudate" data-th="訂購日期">'+item.fdate+'</td><td id="futel" data-th="電話">'+item.ftel+'</td><td><button class="btn btn-info me-2" id="btn-change1">修改</button></td><td id="fruit" data-th="訂單內容">'+item.fcont+'</td><td><button class="btn btn-info me-2" id="btn-change2">修改</button></td><td id="monmon" data-th="總金額">'+item.fmon+'</td></tr>';
+                let strhtml = '<tr><td id="fulist" data-th="訂單編號">'+item.flist+'</td><td id="fudate" data-th="訂購日期">'+item.fdate+'</td><td id="futel" data-th="電話">'+item.ftel+'</td><td><button class="btn btn-info me-2" id="btn-change1">修改</button></td><td id="fruit" data-th="訂單內容">'+item.fcont+'箱</td><td><button class="btn btn-info me-2" id="btn-change2">修改</button></td><td id="monmon" data-th="總金額">'+item.fmon+'</td></tr>';
 
                 $("#show").append(strhtml);
             });

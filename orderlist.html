@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="./styles/bootstrap.min.css">
     <link rel="shortcut icon" href="./icon/title.ico">
     <style>
-        .navtitle{
-            background: linear-gradient(135deg,var(--mycolor8),var(--mycolor1));
+        .navtitle {
+            background: linear-gradient(135deg, var(--mycolor8), var(--mycolor1));
         }
     </style>
 </head>
@@ -96,19 +96,23 @@
             <div class="row my-3">
                 <div class="col-md-8">
                     <div class="col-12 iframes mb-3">
-                        <iframe  src="./images/修過/S__50888808.jpg" frameborder="0" scrolling="no" height="100%" width="80%" name="picfr"></iframe>
+                        <iframe src="./images/修過/S__50888808.jpg" frameborder="0" scrolling="no" height="100%"
+                            width="80%" name="picfr"></iframe>
                     </div>
                     <div class="d-flex mb-4">
                         <div class="col-4  iframes-imges">
-                            <a href="./images/修過/S__50888808.jpg" target="picfr"><img src="./images/修過/S__50888808.jpg" alt="照片不見了!"></a>
+                            <a href="./images/修過/S__50888808.jpg" target="picfr"><img src="./images/修過/S__50888808.jpg"
+                                    alt="照片不見了!"></a>
                         </div>
                         <div class="col-4  iframes-imges">
-                            <a href="./images/修過/S__50888810.jpg" target="picfr"><img src="./images/修過/S__50888810.jpg" alt="照片不見了!"></a>
+                            <a href="./images/修過/S__50888810.jpg" target="picfr"><img src="./images/修過/S__50888810.jpg"
+                                    alt="照片不見了!"></a>
                         </div>
                         <div class="col-4  iframes-imges">
-                            <a href="./images/修過/fruit4-2.jpg" target="picfr"><img src="./images/修過/fruit4-1.jpg" alt="照片不見了!"></a>
+                            <a href="./images/修過/fruit4-2.jpg" target="picfr"><img src="./images/修過/fruit4-1.jpg"
+                                    alt="照片不見了!"></a>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -186,37 +190,37 @@
             let list4 = datelist.minute.toString();
             let list5 = datelist.hour.toString();
             let listall = list1 + list2 + list3 + list5 + list4;
-            // console.log(typeof listall, listall);
-           
+            console.log(typeof listall, listall);
+
 
 
 
             $("#ok_btn").bind("click", function () {
                 let textmon = '請確認訂購數量為:' + numb + '箱\n\n總金額:' + monb + '元\n\n您的訂單編號為:' + listall;
-                confirm(textmon,);
-                let tel = prompt("輸入電話號碼");
-                localStorage.setItem("tel", tel);
-                console.log(listall);
-                console.log(tel);
-                console.log($("#pnum").val());
-                console.log(monb);
-
-                 //PHP連線
-            $.ajax({
-                type:"POST",
-                url:"./20231211-Createdb.php",
-                data: {flist:listall,ftel:tel,fcont:$("#pnum").val(),fmon:monb},
-                success: showdata,
-                error : function(){
-                    alert("失敗");
+                if (confirm(textmon)) {
+                    let tel = prompt("輸入電話號碼");
+                    if (tel != null) {
+                        //PHP連線
+                        $.ajax({
+                            type: "POST",
+                            url: "./20231211-Createdb.php",
+                            data: { flist: listall, ftel: tel, fcont: $("#pnum").val(), fmon: monb },
+                            success: showdata,
+                            error: function () {
+                                alert("失敗");
+                            }
+                        });
+                    } else {
+                        alert("請輸入電話");
+                    }
+                } else {
+                    window.location.replace("./orderlist.html");
                 }
-            });
-                
             });
 
         });
 
-        function showdata(data){
+        function showdata(data) {
             console.log(data);
             alert("訂購成功");
             window.location.replace("./orderlist.html");
