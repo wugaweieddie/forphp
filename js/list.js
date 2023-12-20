@@ -51,8 +51,8 @@ $(function () {
             var listnames = $("#listname").val(); //輸入的
             var tel = $("#tel").val();
             // console.log(buylist.indexOf(listnames));   
-            if(buylist.indexOf(listnames) !=-1 ||$("#listname").val() == admin){
-                if(buytel.indexOf(tel) !=-1 ||$("#tel").val() == adminmimi){
+            if(buylist.indexOf(listnames) !=-1 || listnames == admin){
+                if(buytel.indexOf(tel) !=-1 || tel == adminmimi){
                     if($("#listname").val() == admin){
                         location.href ="./login.html";
                     }else{

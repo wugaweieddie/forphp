@@ -11,7 +11,6 @@
     <link rel="shortcut icon" href="./icon/title.ico">
     <style>
         header {
-            position: sticky;
             top: 0;
             z-index: 10;
         }
@@ -103,9 +102,7 @@
                             <th>訂單編號</th>
                             <th>訂購日期</th>
                             <th>電話</th>
-                            <th></th>
                             <th>訂單內容</th>
-                            <th></th>
                             <th>總金額</th>
                         </tr>
                     </thead>
@@ -113,16 +110,44 @@
                         <tr >
                             <td id="fulist" data-th="訂單編號">XXXX</td>
                             <td id="fudate" data-th="訂購日期">XXXX</td>
-                            <td id="futel" data-th="電話">XXXX</td>
-                            <td><button class="btn btn-info me-2" id="btn-change1">修改</button></td>
-                            <td id="fruit" data-th="訂單內容">XXXX</td>
-                            <td><button class="btn btn-info me-2" id="btn-change2">修改</button></td>
+                            <td id="futel" data-th="電話">XXXX</td>                            
+                            <td id="fruit" data-th="訂單內容">XXXX</td>                            
                             <td id="monmon" data-th="總金額">XXXX</td>
                         </tr>
                     </tbody>
                 </table>
                 <div class="btns my-3 d-flex justify-content-end">
+                    <button class="btn btn-success me-2" id="btn_change1" data-bs-toggle="modal" data-bs-target="#newtel">修改電話</button>
+                    <button class="btn btn-info me-2" id="btn_change2">修改數量</button>
                     <button class="btn btn-danger" id="btn-reset">刪除</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 修改電話畫面 -->
+        <div class="modal fade" id="newtel">
+            <!--讓上面的超連接來連結-->
+            <div class="modal-dialog">
+                <!--彈出框框-->
+                <div class="modal-content">
+                    <!-- header -->
+                    <div class="modal-header d-flex justify-content-center">
+                        <h3 class="text-center">修改電話</h3>
+                    </div>
+                    <!-- body -->
+                    <div class="modal-body">
+                        <div>
+                            <div class="mb-3 username">
+                                <label for="" class="form-label">訂單編號</label>
+                                <input id="listname" type="text" class="form-control " placeholder="請輸入訂單編號">
+                            </div>
+                            <div class="mb-3 usermimi">
+                                <label for="tel" class="form-label">電話</label>
+                                <input id="newtel" type="text" class="form-control" placeholder="請輸入電話號碼">
+                            </div>
+                            <button id="OK_btn" class="btn btn-success" style="width: 50%;">確認</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -157,7 +182,7 @@
             $("#show").empty();
             data.forEach(function(item){
                 // console.log(item.flist);
-                let strhtml = '<tr><td id="fulist" data-th="訂單編號">'+item.flist+'</td><td id="fudate" data-th="訂購日期">'+item.fdate+'</td><td id="futel" data-th="電話">'+item.ftel+'</td><td><button class="btn btn-info me-2" id="btn-change1">修改</button></td><td id="fruit" data-th="訂單內容">'+item.fcont+'箱</td><td><button class="btn btn-info me-2" id="btn-change2">修改</button></td><td id="monmon" data-th="總金額">'+item.fmon+'</td></tr>';
+                let strhtml = '<tr><td id="fulist" data-th="訂單編號">'+item.flist+'</td><td id="fudate" data-th="訂購日期">'+item.fdate+'</td><td id="futel" data-th="電話">'+item.ftel+'</td><<td id="fruit" data-th="訂單內容">'+item.fcont+'箱</td><td id="monmon" data-th="總金額">'+item.fmon+'</td></tr>';
 
                 $("#show").append(strhtml);
             });
