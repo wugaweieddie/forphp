@@ -22,9 +22,9 @@ $(function () {
 
 
     $("#sw1").change(function () {
-        console.log($(this).val());
+        // console.log($(this).val());
         if ($(this).is(':checked')) {
-            console.log("同意");
+            // console.log("同意");
             $(this).next().text("已確認資料");
             isAgree = true;
         }
@@ -50,20 +50,20 @@ $(function () {
         if (isAgree == true) {
             var listnames = $("#listname").val(); //輸入的
             var tel = $("#tel").val();
-            buylist.forEach(function(item){
-                // console.log(item);
-                if(item == listnames){
-                    buytel.forEach(function(item2){
-                        if(item2 == tel){
-                            window.location.replace("./login.html");
-                        }else{
-                            alert("電話錯誤!");
-                        }
-                    });
+            // console.log(buylist.indexOf(listnames));   
+            if(buylist.indexOf(listnames) !=-1 ||$("#listname").val() == admin){
+                if(buytel.indexOf(tel) !=-1 ||$("#tel").val() == adminmimi){
+                    if($("#listname").val() == admin){
+                        location.href ="./login.html";
+                    }else{
+                        location.href ="./visitor.html";
+                    }
                 }else{
-                    alert("訂單編號錯誤!");
+                    alert("密碼錯誤!");
                 }
-            });   
+            }else{
+                alert("查無訂單");
+            }
         } else {
             alert("檢查訂單資料");
         }

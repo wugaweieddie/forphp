@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百香果B2C｜會員</title>
+    <link rel="stylesheet" href="./styles/myall.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="shortcut icon" href="./icon/title.ico">
+    <style>
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .navtitle{
+            background: linear-gradient(135deg,var(--mycolor8),var(--mycolor1));
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 回上層按鈕 -->
+    <!-- <div id="backtop" class="toTop-arrow">
+        <img src="./images/LOGO.png">
+    </div> -->
+    <!-- 選單列 -->
+    <header>
+        <nav class="navbar navbar-expand-lg navtitle">
+            <div class="container-fluid logo">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./images/LOGOone.png" alt="百香果B2C">
+                    <p class="logotext">百香果B2C</p>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link text-danger" aria-current="page" href="./index.html">百香果B2C</a>
+                        <a class="nav-link" href="./about.html" target="_self">關於我們</a>
+                        <a class="nav-link" href="./product.html" target="_self">商品訂購</a>
+                        <a class="nav-link" href="./contactus.html" target="_self">聯絡我們</a>
+                        <a class="nav-link" href="#" type="button" data-bs-toggle="modal"
+                            data-bs-target="#suflist">訂單查詢</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- 登入彈出介面 -->
+    <div class="modal fade" id="suflist">
+        <!--讓上面的超連接來連結-->
+        <div class="modal-dialog">
+            <!--彈出框框-->
+            <div class="modal-content">
+                <!-- header -->
+                <div class="modal-header">
+                    <h3>訂單查詢</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- body -->
+                <div class="modal-body">
+                    <div>
+                        <div class="mb-3 username">
+                            <label for="" class="form-label">訂單編號</label>
+                            <input id="listname" type="text" class="form-control " placeholder="請輸入訂單編號">
+                        </div>
+                        <div class="mb-3 usermimi">
+                            <label for="tel" class="form-label">電話</label>
+                            <input id="tel" type="text" class="form-control" placeholder="請輸入電話號碼">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">購買日期</label>
+                            <input type="date" name="" id="buyday" class="form-control">
+                        </div>
+                        <div class="form-check form-switch">
+                            <input type="checkbox" class="form-check-input" role="switch" name="sw1" id="sw1">
+                            <label class="form-check-label" for="sw1">未確認資料</label>
+                        </div>
+                        <button id="OK_btn" class="btn btn-info" style="width: 100%;">確認</button>
+                    </div>
+                </div>
+                <!-- footer -->
+                <div class="modal-footer">
+                    <a href="#" type="button">聯絡客服</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="main6">
+        <div class="container">
+            <div class="row">
+                <div class="welcome mt-5" id="visitor">一般民眾</div>
+                <table class="table table-active table-bordered mt-5">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>訂單編號</th>
+                            <th>訂購日期</th>
+                            <th>電話</th>
+                            <th></th>
+                            <th>訂單內容</th>
+                            <th></th>
+                            <th>總金額</th>
+                        </tr>
+                    </thead>
+                    <tbody id="show">
+                        <tr >
+                            <td id="fulist" data-th="訂單編號">XXXX</td>
+                            <td id="fudate" data-th="訂購日期">XXXX</td>
+                            <td id="futel" data-th="電話">XXXX</td>
+                            <td><button class="btn btn-info me-2" id="btn-change1">修改</button></td>
+                            <td id="fruit" data-th="訂單內容">XXXX</td>
+                            <td><button class="btn btn-info me-2" id="btn-change2">修改</button></td>
+                            <td id="monmon" data-th="總金額">XXXX</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="btns my-3 d-flex justify-content-end">
+                    <button class="btn btn-danger" id="btn-reset">刪除</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- 頁尾 -->
+    <footer class="footer">
+        <div>
+            <p>Copyright © 2023 GaWei. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./js/Jquery.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/list.js"></script>
+
+
+
+    <script>
+        $(function(){
+            $.ajax({
+                type:"GET",
+                url:"./20231211-Readdb.php",
+                dataType:"json",
+                success :showdata,
+                error:function(){
+                    alert("錯誤");
+                }
+            });
+        });
+        function showdata(data){
+            // console.log(data);
+            $("#show").empty();
+            data.forEach(function(item){
+                // console.log(item.flist);
+                let strhtml = '<tr><td id="fulist" data-th="訂單編號">'+item.flist+'</td><td id="fudate" data-th="訂購日期">'+item.fdate+'</td><td id="futel" data-th="電話">'+item.ftel+'</td><td><button class="btn btn-info me-2" id="btn-change1">修改</button></td><td id="fruit" data-th="訂單內容">'+item.fcont+'箱</td><td><button class="btn btn-info me-2" id="btn-change2">修改</button></td><td id="monmon" data-th="總金額">'+item.fmon+'</td></tr>';
+
+                $("#show").append(strhtml);
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -181,7 +181,8 @@
                 month: time.getMonth() + 1,
                 date: time.getDate(),
                 hour: time.getHours(),
-                minute: time.getMinutes()
+                minute: time.getMinutes(),
+                second:time.getSeconds(),
             }
             let list1 = datelist.year.toString();
             // console.log(typeof list1, list1);
@@ -189,8 +190,10 @@
             let list3 = datelist.date.toString();
             let list4 = datelist.minute.toString();
             let list5 = datelist.hour.toString();
-            let listall = list1 + list2 + list3 + list5 + list4;
+            let list6 = datelist.second.toString();
+            let listall = list1 + list2 + list3 + list5 + list4+list6;
             console.log(typeof listall, listall);
+            // console.log(list6);
 
 
 
