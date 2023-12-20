@@ -15,8 +15,9 @@
             top: 0;
             z-index: 10;
         }
-        .navtitle{
-            background: linear-gradient(135deg,var(--mycolor8),var(--mycolor1));
+
+        .navtitle {
+            background: linear-gradient(135deg, var(--mycolor8), var(--mycolor1));
         }
     </style>
 </head>
@@ -103,25 +104,23 @@
                             <th>訂單編號</th>
                             <th>訂購日期</th>
                             <th>電話</th>
-                            <th></th>
                             <th>訂單內容</th>
-                            <th></th>
                             <th>總金額</th>
                         </tr>
                     </thead>
                     <tbody id="show">
-                        <tr >
+                        <tr>
                             <td id="fulist" data-th="訂單編號">XXXX</td>
                             <td id="fudate" data-th="訂購日期">XXXX</td>
                             <td id="futel" data-th="電話">XXXX</td>
-                            <td><button class="btn btn-info me-2" id="btn-change1">修改</button></td>
                             <td id="fruit" data-th="訂單內容">XXXX</td>
-                            <td><button class="btn btn-info me-2" id="btn-change2">修改</button></td>
                             <td id="monmon" data-th="總金額">XXXX</td>
                         </tr>
                     </tbody>
                 </table>
                 <div class="btns my-3 d-flex justify-content-end">
+                    <button class="btn btn-success me-2" id="btn_change1">修改電話</button>
+                    <button class="btn btn-info me-2" id="btn_change2">修改數量</button>
                     <button class="btn btn-danger" id="btn-reset">刪除</button>
                 </div>
             </div>
@@ -141,26 +140,127 @@
 
 
     <script>
-        $(function(){
+        //取得前面傳過來的訂單編號
+        let butlistvalue;
+        function url() {
+            butlistvalue = window.location.search.substring(1);
+            let vars = butlistvalue.split("=");
+            return vars[1];
+        }
+
+        function showdata(data) {
+            // console.log(data);
+            //將訂單編號單獨拉出變成陣列
+            let flistnum = [];
+            data.forEach(function (item) {
+                // console.log(item);
+                flistnum.push(item.flist);
+            });
+            // console.log(A1);
+            // console.log(A1.indexOf(url()));
+            //訂單陣列位置
+            let flistpos = flistnum.indexOf(url());
+            // console.log(typeof flistpos, flistpos);
+            $("#show").empty();
+            let strhtml = '<tr><td id="fulist" data-th="訂單編號">' + data[flistpos].flist + '</td><td id="fudate" data-th="訂購日期">' + data[flistpos].fdate + '</td><td id="futel" data-th="電話">' + data[flistpos].ftel + '</td><td id="fruit" data-th="訂單內容">' + data[flistpos].fcont + '箱</td><td id="monmon" data-th="總金額">' + data[flistpos].fmon + '</td></tr>';
+
+            $("#show").html(strhtml);
+        }
+
+
+
+
+
+        let newtel; //存儲新電話
+        let newcont; //存儲新數量
+        let newmon; //儲存新金額
+        $(function () {
             $.ajax({
-                type:"GET",
-                url:"./20231211-Readdb.php",
-                dataType:"json",
-                success :showdata,
-                error:function(){
+                type: "GET",
+                url: "./20231211-Readdb.php",
+                dataType: "json",
+                success: showdata,
+                error: function () {
                     alert("錯誤");
                 }
             });
-        });
-        function showdata(data){
-            // console.log(data);
-            $("#show").empty();
-            data.forEach(function(item){
-                // console.log(item.flist);
-                let strhtml = '<tr><td id="fulist" data-th="訂單編號">'+item.flist+'</td><td id="fudate" data-th="訂購日期">'+item.fdate+'</td><td id="futel" data-th="電話">'+item.ftel+'</td><td><button class="btn btn-info me-2" id="btn-change1">修改</button></td><td id="fruit" data-th="訂單內容">'+item.fcont+'箱</td><td><button class="btn btn-info me-2" id="btn-change2">修改</button></td><td id="monmon" data-th="總金額">'+item.fmon+'</td></tr>';
 
-                $("#show").append(strhtml);
+            $("#btn-reset").bind("click", function () {
+                if (confirm("確認要清除訂單?")) {
+                    console.log(url());
+                    //刪除選單
+                    $.ajax({
+                        type: "POST",
+                        url: "./20231211-Deletedb.php",
+                        data: { flist: url() },
+                        success: deleteflist,
+                        error: function () {
+                            alert("刪除失敗");
+                        }
+                    });
+                } else {
+                    location.href = "./visitor.html?" + butlistvalue;
+                }
             });
+
+            //修改電話
+            $("#btn_change1").bind("click",function(){
+               newtel = prompt("修改電話");
+               if(newtel != "" && newtel != null){
+                // console.log(newtel);
+                $.ajax({
+                    type:"POST",
+                    url:"./20231211-Updatadb.php",
+                    data:{flist:url(),ftel:newtel},
+                    success:updatatel,
+                    error:function(){
+                        alert("修改失敗");
+                    }
+                });
+               }
+            });
+            // console.log(url());
+            //修改數量
+            $("#btn_change2").bind("click",function(){
+                newcont = prompt("修改數量");
+               if(newcont != "" && newcont != null){
+                // console.log(newtel);
+                newmon = newcont*500;
+                alert("更改後數量為"+newcont+"箱\n總金額:"+newmon);
+                $.ajax({
+                    type:"POST",
+                    url:"./20231211-Updatadb2.php",
+                    data:{flist:url(),fcont:newcont,fmon:newmon},
+                    success:updatacont,
+                    error:function(){
+                        alert("修改失敗");
+                    }
+                });
+               }
+            });
+
+
+
+        });
+
+        
+
+
+        //刪除
+        function deleteflist(data) {
+            alert("刪除訂單成功!");
+            window.location.href = "./index.html";
+        }
+
+        //修改電話
+        function updatatel(){
+            alert("修改電話成功!");
+            location.href = "./visitor.html?" + butlistvalue;
+        }
+        //修改數量
+        function updatacont(){
+            alert("修改數量成功!");
+            location.href = "./visitor.html?" + butlistvalue;
         }
     </script>
 </body>

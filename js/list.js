@@ -56,7 +56,8 @@ $(function () {
                     if($("#listname").val() == admin){
                         location.href ="./login.html";
                     }else{
-                        location.href ="./visitor.html";
+                        // console.log($("#listname").val());
+                        location.href ="./visitor.html?value="+$("#listname").val()+"";
                     }
                 }else{
                     alert("密碼錯誤!");
