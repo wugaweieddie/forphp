@@ -46,7 +46,7 @@ $(function () {
     //         alert("資料錯誤");
     //     }
 
-        //一般訂購者
+        //一般訂購者與商家登入
         if (isAgree == true) {
             var listnames = $("#listname").val(); //輸入的
             var tel = $("#tel").val();
