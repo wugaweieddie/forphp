@@ -143,7 +143,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="tel" class="form-label">電話</label>
-                                <input id="newtel" type="text" class="form-control" placeholder="請輸入電話號碼">
+                                <input id="uptel" type="text" class="form-control" placeholder="請輸入電話號碼">
                             </div>
                             <div class="telbtn mt-2 d-flex justify-content-between">
                                 <button id="telOK_btn" class="btn btn-success w-25" >確認</button>
@@ -174,7 +174,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="newcont" class="form-label">修改數量</label>
-                                <input id="newcont" type="text" class="form-control" placeholder="請輸入修改數量">
+                                <input id="upcont" type="text" class="form-control" placeholder="請輸入修改數量">
                             </div>
                             <div class="telbtn mt-2 d-flex justify-content-between">
                                 <button id="contOK_btn" class="btn btn-success w-25" >確認</button>
@@ -260,13 +260,57 @@
                     });
                 }
                 }
+            });
 
+            //修改電話
+            $("#telOK_btn").bind("click",function(){
+                let dev = $("#newlistname1").val();
+                let tel =  $("#uptel").val();
+                console.log(typeof tel,tel);
+                if(dellist.indexOf(dev) == -1){
+                    alert("無此訂單");
+                }else{
+                    if(confirm("修改電話為:"+tel)){
+                        $.ajax({
+                            type:"POST",
+                            url:"./20231211-Updatadb.php",
+                            data:{flist:dev,ftel:tel},
+                            success:showtel,
+                            error:function(){
+                                alert("修改失敗");
+                            }
+                        });
+                    }
+                    
+                }
+                
 
+            });
 
-
-
-
-
+            //修改數量
+            $("#contOK_btn").bind("click",function(){
+                // console.log($("#newlistname1").val());
+                let dev = $("#newlistname2").val();
+                let cont = $("#upcont").val();
+                let upmon = cont*500;
+                if(dellist.indexOf(dev) == -1){
+                    alert("無此訂單");
+                }else{
+                    if(confirm("修改數量為:"+cont)){
+                        alert("金額為:"+upmon);
+                        $.ajax({
+                            type:"POST",
+                            url:"./20231211-Updatadb2.php",
+                            data:{flist:dev,fcont:cont,fmon:upmon},
+                            success:showtel,
+                            error:function(){
+                                alert("修改失敗");
+                            }
+                        });
+                    }
+                    
+                }
+                
 
             });
         });
@@ -288,6 +332,18 @@
         function showdelete(){
             console.log("OK");
             alert("刪除成功");
+            location.href="./login.html";
+        }
+        //修改電話
+        function showtel(){
+            console.log("OK");
+            alert("修改成功");
+            location.href="./login.html";
+        }
+        //修改數量
+        function showcont(){
+            console.log("OK");
+            alert("修改成功");
             location.href="./login.html";
         }
     </script>

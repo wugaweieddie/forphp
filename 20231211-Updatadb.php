@@ -2,9 +2,7 @@
     header("Access-Control-Allow-Origin: *");
     //接收前端過來的值
     $p_flist = $_POST["flist"];
-    $p_ftel = $_POST["ftel"];
-
-
+    $p_ftel = (string)$_POST["ftel"];
 
 
     $servername = "localhost";
@@ -17,7 +15,7 @@
     $conn = new PDO("mysql:host=$servername;dbname=$dbname",$username,$password);
     //設定錯誤模式
     $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-    $sql = "UPDATE food SET ftel=$p_ftel WHERE flist=$p_flist";
+    $sql = "UPDATE food SET ftel='$p_ftel' WHERE flist=$p_flist"; //要加''變字串
     $conn->exec($sql);
     echo"新增成功!";
     }catch(PDOException $e){
