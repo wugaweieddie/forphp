@@ -5,6 +5,8 @@
     $p_ftel = $_POST["ftel"];
     $p_fcont = $_POST["fcont"];
     $p_fmon = $_POST["fmon"];
+    $p_fadd = $_POST["fadd"];
+
 
 
 
@@ -18,7 +20,7 @@
     $conn = new PDO("mysql:host=$servername;dbname=$dbname",$username,$password);
     //設定錯誤模式
     $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-    $sql ="INSERT INTO food(flist,ftel,fcont,fmon) VALUES('$p_flist','$p_ftel','$p_fcont','$p_fmon')";
+    $sql ="INSERT INTO food(flist,ftel,fcont,fmon,fadd) VALUES('$p_flist','$p_ftel','$p_fcont','$p_fmon','$p_fadd')";
     $conn->exec($sql);
     echo"新增成功!";
     }catch(PDOException $e){

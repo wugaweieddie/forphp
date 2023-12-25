@@ -75,10 +75,6 @@
                             <label for="tel" class="form-label">電話</label>
                             <input id="tel" type="text" class="form-control" placeholder="請輸入電話號碼">
                         </div>
-                        <div class="mb-3">
-                            <label for="" class="form-label">購買日期</label>
-                            <input type="date" name="" id="buyday" class="form-control">
-                        </div>
                         <div class="form-check form-switch">
                             <input type="checkbox" class="form-check-input" role="switch" name="sw1" id="sw1">
                             <label class="form-check-label" for="sw1">未確認資料</label>
@@ -104,6 +100,7 @@
                             <th>訂單編號</th>
                             <th>訂購日期</th>
                             <th>電話</th>
+                            <th>地址</th>
                             <th>訂單內容</th>
                             <th>總金額</th>
                         </tr>
@@ -113,6 +110,7 @@
                             <td id="fulist" data-th="訂單編號">XXXX</td>
                             <td id="fudate" data-th="訂購日期">XXXX</td>
                             <td id="futel" data-th="電話">XXXX</td>
+                            <td id="fadd" data-th="地址">XXXX</td>
                             <td id="fruit" data-th="訂單內容">XXXX</td>
                             <td id="monmon" data-th="總金額">XXXX</td>
                         </tr>
@@ -121,6 +119,7 @@
                 <div class="btns my-3 d-flex justify-content-end">
                     <button class="btn btn-success me-2" id="btn_change1">修改電話</button>
                     <button class="btn btn-info me-2" id="btn_change2">修改數量</button>
+                    <button class="btn btn-warning me-2" id="btn_change3">修改地址</button>
                     <button class="btn btn-danger" id="btn-reset">刪除</button>
                 </div>
             </div>
@@ -163,7 +162,7 @@
             let flistpos = flistnum.indexOf(url());
             // console.log(typeof flistpos, flistpos);
             $("#show").empty();
-            let strhtml = '<tr><td id="fulist" data-th="訂單編號">' + data[flistpos].flist + '</td><td id="fudate" data-th="訂購日期">' + data[flistpos].fdate + '</td><td id="futel" data-th="電話">' + data[flistpos].ftel + '</td><td id="fruit" data-th="訂單內容">' + data[flistpos].fcont + '箱</td><td id="monmon" data-th="總金額">' + data[flistpos].fmon + '</td></tr>';
+            let strhtml = '<tr><td id="fulist" data-th="訂單編號">' + data[flistpos].flist + '</td><td id="fudate" data-th="訂購日期">' + data[flistpos].fdate + '</td><td id="futel" data-th="電話">' + data[flistpos].ftel + '</td><td id="fadd" data-th="地址">' + data[flistpos].fadd + '</td><td id="fruit" data-th="訂單內容">' + data[flistpos].fcont + '箱</td><td id="monmon" data-th="總金額">' + data[flistpos].fmon + '</td></tr>';
 
             $("#show").html(strhtml);
         }
@@ -175,6 +174,7 @@
         let newtel; //存儲新電話
         let newcont; //存儲新數量
         let newmon; //儲存新金額
+        let newadd; //儲存新地址
         $(function () {
             $.ajax({
                 type: "GET",
@@ -240,6 +240,23 @@
                }
             });
 
+            //修改地址
+            $("#btn_change3").bind("click",function(){
+               newadd = prompt("修改地址");
+               if(newadd != "" && newadd != null){
+                // console.log(newtel);
+                $.ajax({
+                    type:"POST",
+                    url:"./20231211-Updatadb3.php",
+                    data:{flist:url(),fadd:newadd},
+                    success:updatafadd,
+                    error:function(){
+                        alert("修改失敗");
+                    }
+                });
+               };
+            });
+
 
 
         });
@@ -261,6 +278,11 @@
         //修改數量
         function updatacont(){
             alert("修改數量成功!");
+            location.href = "./visitor.html?" + butlistvalue;
+        }
+        //修改地址
+        function updatafadd(){
+            alert("修改地址成功!");
             location.href = "./visitor.html?" + butlistvalue;
         }
     </script>

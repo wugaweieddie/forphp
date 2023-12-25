@@ -73,10 +73,6 @@
                             <label for="tel" class="form-label">電話</label>
                             <input id="tel" type="text" class="form-control" placeholder="請輸入電話號碼">
                         </div>
-                        <div class="mb-3">
-                            <label for="" class="form-label">購買日期</label>
-                            <input type="date" name="" id="buyday" class="form-control">
-                        </div>
                         <div class="form-check form-switch">
                             <input type="checkbox" class="form-check-input" role="switch" name="sw1" id="sw1">
                             <label class="form-check-label" for="sw1">未確認資料</label>
@@ -102,16 +98,18 @@
                             <th>訂單編號</th>
                             <th>訂購日期</th>
                             <th>電話</th>
+                            <th>地址</th>
                             <th>訂單內容</th>
                             <th>總金額</th>
                         </tr>
                     </thead>
                     <tbody id="show">
-                        <tr >
+                        <tr>
                             <td id="fulist" data-th="訂單編號">XXXX</td>
                             <td id="fudate" data-th="訂購日期">XXXX</td>
-                            <td id="futel" data-th="電話">XXXX</td>                            
-                            <td id="fruit" data-th="訂單內容">XXXX</td>                            
+                            <td id="futel" data-th="電話">XXXX</td>
+                            <td id="fadd" data-th="地址">XXXX</td>
+                            <td id="fruit" data-th="訂單內容">XXXX</td>
                             <td id="monmon" data-th="總金額">XXXX</td>
                         </tr>
                     </tbody>
@@ -323,7 +321,7 @@
             data.forEach(function(item){
                 dellist.push(item.flist);
                 // console.log(item.flist);
-                let strhtml = '<tr><td id="fulist" data-th="訂單編號">'+item.flist+'</td><td id="fudate" data-th="訂購日期">'+item.fdate+'</td><td id="futel" data-th="電話">'+item.ftel+'</td><<td id="fruit" data-th="訂單內容">'+item.fcont+'箱</td><td id="monmon" data-th="總金額">'+item.fmon+'</td></tr>';
+                let strhtml = '<tr><td id="fulist" data-th="訂單編號">'+item.flist+'</td><td id="fudate" data-th="訂購日期">'+item.fdate+'</td><td id="futel" data-th="電話">'+item.ftel+'</td><td id="fadd" data-th="地址">'+item.fadd+'</td><td id="fruit" data-th="訂單內容">'+item.fcont+'箱</td><td id="monmon" data-th="總金額">'+item.fmon+'</td></tr>';
                 $("#show").append(strhtml);
             });
         }

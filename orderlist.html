@@ -69,10 +69,6 @@
                             <label for="tel" class="form-label">電話</label>
                             <input id="tel" type="text" class="form-control" placeholder="請輸入電話號碼">
                         </div>
-                        <div class="mb-3">
-                            <label for="" class="form-label">購買日期</label>
-                            <input type="date" name="" id="buyday" class="form-control">
-                        </div>
                         <div class="form-check form-switch">
                             <input type="checkbox" class="form-check-input" role="switch" name="sw1" id="sw1">
                             <label class="form-check-label" for="sw1">未確認資料</label>
@@ -203,26 +199,32 @@
                     let textmon = '請確認訂購數量為:' + numb + '箱\n\n總金額:' + monb + '元\n\n您的訂單編號為:' + listall;
                     if (confirm(textmon)) {
                         let tel = prompt("輸入電話號碼");
-                        console.log(typeof tel,tel);
-                        if (tel) {
-                            //PHP連線
-                            $.ajax({
-                                type: "POST",
-                                url: "./20231211-Createdb.php",
-                                data: { flist: listall, ftel: tel, fcont: $("#pnum").val(), fmon: monb },
-                                success: showdata,
-                                error: function () {
-                                    alert("失敗");
-                                }
-                            });
+                        // console.log(typeof tel, tel);
+                        if (tel != 0) {
+                            let address = prompt("請輸入地址");
+                            if (address != 0) {
+                                //PHP連線
+                                $.ajax({
+                                    type: "POST",
+                                    url: "./20231211-Createdb.php",
+                                    data: { flist: listall, ftel: tel, fcont: $("#pnum").val(), fmon: monb,fadd:address},
+                                    success: showdata,
+                                    error: function () {
+                                        alert("失敗");
+                                    }
+                                });
+                            }else{
+                                alert("請輸入地址");
+                            }
                         } else {
                             alert("請輸入電話");
                         }
+
                     } else {
                         window.location.replace("./orderlist.html");
                     }
 
-                }else{
+                } else {
                     alert("輸入數量");
                 }
             });
@@ -232,7 +234,7 @@
         function showdata(data) {
             console.log(data);
             alert("訂購成功");
-            location.href ="./visitor.html?value="+listall+"";
+            location.href = "./visitor.html?value=" + listall + "";
         }
     </script>
 </body>

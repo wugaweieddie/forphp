@@ -11,7 +11,7 @@
         //設定錯誤顯示模式
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         //設定mysql指令
-        $stmt = $conn->prepare("SELECT ID,flist,fdate,ftel,fcont,fmon FROM food");
+        $stmt = $conn->prepare("SELECT ID,flist,fdate,ftel,fcont,fmon,fadd FROM food");
         //執行mysql指令
         $stmt->execute();
         //設定讀取出來的資料轉成陣列
