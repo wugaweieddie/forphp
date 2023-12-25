@@ -160,7 +160,7 @@
             });
         });
 
-
+        let listall;
         $(function () {
             let numb = 0;
             let monb = 0;
@@ -191,20 +191,20 @@
             let list4 = datelist.minute.toString();
             let list5 = datelist.hour.toString();
             let list6 = datelist.second.toString();
-            let listall = list1 + list2 + list3 + list5 + list4 + list6;
+            listall = list1 + list2 + list3 + list5 + list4 + list6;
             // console.log(typeof listall, listall);
             // console.log(list6);
 
 
 
-            let buybutton = Number($("#pnum"));
+            let buybutton = $("#pnum");
             $("#ok_btn").bind("click", function () {
-                if (buybutton != NaN) {
-                    console.log(typeof buybutton, buybutton);
+                if (monb != 0) {
                     let textmon = '請確認訂購數量為:' + numb + '箱\n\n總金額:' + monb + '元\n\n您的訂單編號為:' + listall;
                     if (confirm(textmon)) {
                         let tel = prompt("輸入電話號碼");
-                        if (tel != null) {
+                        console.log(typeof tel,tel);
+                        if (tel) {
                             //PHP連線
                             $.ajax({
                                 type: "POST",
@@ -222,6 +222,8 @@
                         window.location.replace("./orderlist.html");
                     }
 
+                }else{
+                    alert("輸入數量");
                 }
             });
 
@@ -230,7 +232,7 @@
         function showdata(data) {
             console.log(data);
             alert("訂購成功");
-            window.location.replace("./orderlist.html");
+            location.href ="./visitor.html?value="+listall+"";
         }
     </script>
 </body>
