@@ -686,6 +686,9 @@ html .main5 .container .row .col-md-8 .iframes-imges a:hover, body .main5 .conta
 html .main5 .container .row .col-md-4 .mytext h3, body .main5 .container .row .col-md-4 .mytext h3 {
   border-bottom: 3px solid red;
 }
+html .main6 .container .row #visitor, body .main6 .container .row #visitor {
+  font-weight: bolder;
+}
 html .main6 .container .row table thead tr th, body .main6 .container .row table thead tr th {
   font-size: 1.5rem;
   line-height: 1rem;

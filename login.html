@@ -9,13 +9,20 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/bootstrap.min.css">
     <link rel="shortcut icon" href="./icon/title.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         header {
             top: 0;
             z-index: 10;
         }
-        .navtitle{
-            background: linear-gradient(135deg,var(--mycolor8),var(--mycolor1));
+
+        .navtitle {
+            background: linear-gradient(135deg, var(--mycolor8), var(--mycolor1));
+        }
+        #visitor{
+            color:var(--mycolor3);
+            font-size: 2rem;
+            font-weight: bolder;
         }
     </style>
 </head>
@@ -91,8 +98,8 @@
     <main class="main6">
         <div class="container">
             <div class="row">
-                <div class="welcome mt-5" id="visitor">商家</div>
-                <table class="table table-active table-bordered mt-5">
+                <div class="welcome mt-5" id="visitor"><i class="fa-solid fa-shop"></i>商家</div>
+                <table class="table  table-striped mt-5 table-bordered">
                     <thead class="table-dark">
                         <tr>
                             <th>訂單編號</th>
@@ -115,9 +122,14 @@
                     </tbody>
                 </table>
                 <div class="btns my-3 d-flex justify-content-end">
-                    <button class="btn btn-success me-2" id="btn_change1" data-bs-toggle="modal" data-bs-target="#newtel">修改電話</button>
-                    <button class="btn btn-info me-2" id="btn_change2" data-bs-toggle="modal" data-bs-target="#newcont">修改數量</button>
-                    <button class="btn btn-danger" id="btn-reset" data-bs-toggle="modal" data-bs-target="#alldelete">刪除</button>
+                    <button class="btn btn-success me-2" id="btn_change1" data-bs-toggle="modal"
+                        data-bs-target="#newtel">修改電話</button>
+                    <button class="btn btn-info me-2" id="btn_change2" data-bs-toggle="modal"
+                        data-bs-target="#newcont">修改數量</button>
+                    <button class="btn btn-warning me-2" id="btn_change3" data-bs-toggle="modal"
+                    data-bs-target="#newadd">修改地址</button>
+                    <button class="btn btn-danger" id="btn-reset" data-bs-toggle="modal"
+                        data-bs-target="#alldelete">刪除</button>
                 </div>
             </div>
         </div>
@@ -144,8 +156,8 @@
                                 <input id="uptel" type="text" class="form-control" placeholder="請輸入電話號碼">
                             </div>
                             <div class="telbtn mt-2 d-flex justify-content-between">
-                                <button id="telOK_btn" class="btn btn-success w-25" >確認</button>
-                                <button  class="btn btn-danger w-25" data-bs-dismiss="modal">取消</button>
+                                <button id="telOK_btn" class="btn btn-success w-25">確認</button>
+                                <button class="btn btn-danger w-25" data-bs-dismiss="modal">取消</button>
                             </div>
                         </div>
                     </div>
@@ -175,7 +187,7 @@
                                 <input id="upcont" type="text" class="form-control" placeholder="請輸入修改數量">
                             </div>
                             <div class="telbtn mt-2 d-flex justify-content-between">
-                                <button id="contOK_btn" class="btn btn-success w-25" >確認</button>
+                                <button id="contOK_btn" class="btn btn-success w-25">確認</button>
                                 <button class="btn btn-danger w-25" data-bs-dismiss="modal">取消</button>
                             </div>
                         </div>
@@ -183,8 +195,40 @@
                 </div>
             </div>
         </div>
-         <!-- 刪除畫面 -->
-         <div class="modal fade" id="alldelete">
+
+        <!-- 修改地址畫面 -->
+        <div class="modal fade" id="newadd">
+            <!--讓上面的超連接來連結-->
+            <div class="modal-dialog">
+                <!--彈出框框-->
+                <div class="modal-content">
+                    <!-- header -->
+                    <div class="modal-header d-flex justify-content-center">
+                        <h3 class="text-center">修改地址</h3>
+                    </div>
+                    <!-- body -->
+                    <div class="modal-body">
+                        <div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">訂單編號</label>
+                                <input id="newlistname3" type="text" class="form-control " placeholder="請輸入訂單編號">
+                            </div>
+                            <div class="mb-3">
+                                <label for="add" class="form-label">地址</label>
+                                <input id="upadd" type="text" class="form-control" placeholder="請輸入修改地址">
+                            </div>
+                            <div class="addbtn mt-2 d-flex justify-content-between">
+                                <button id="addOK_btn" class="btn btn-success w-25">確認</button>
+                                <button class="btn btn-danger w-25" data-bs-dismiss="modal">取消</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 刪除畫面 -->
+        <div class="modal fade" id="alldelete">
             <!--讓上面的超連接來連結-->
             <div class="modal-dialog">
                 <!--彈出框框-->
@@ -198,10 +242,10 @@
                         <div>
                             <div class="mb-3">
                                 <label for="" class="form-label">訂單編號</label>
-                                <input id="newlistname3" type="text" class="form-control " placeholder="請輸入訂單編號">
+                                <input id="newlistname4" type="text" class="form-control " placeholder="請輸入訂單編號">
                             </div>
                             <div class="telbtn mt-2 d-flex justify-content-between">
-                                <button id="alldeleteOK_btn" class="btn btn-success w-25" >確認</button>
+                                <button id="alldeleteOK_btn" class="btn btn-success w-25">確認</button>
                                 <button class="btn btn-danger w-25" data-bs-dismiss="modal">取消</button>
                             </div>
                         </div>
@@ -224,14 +268,14 @@
 
 
     <script>
-        $(function(){
+        $(function () {
             //呈現表單
             $.ajax({
-                type:"GET",
-                url:"./20231211-Readdb.php",
-                dataType:"json",
-                success :showdata,
-                error:function(){
+                type: "GET",
+                url: "./20231211-Readdb.php",
+                dataType: "json",
+                success: showdata,
+                error: function () {
                     alert("錯誤");
                 }
             });
@@ -239,111 +283,133 @@
 
             //刪除訂單
 
-            $("#alldeleteOK_btn").bind("click",function(){
+            $("#alldeleteOK_btn").bind("click", function () {
                 // console.log($("#newlistname3").val());
-                let dev = $("#newlistname3").val();
-                
-                if(dellist.indexOf(dev) == -1){
+                let dev = $("#newlistname4").val();
+
+                if (dellist.indexOf(dev) == -1) {
                     alert("無此訂單");
-                }else{
-                    if(confirm("確定要刪除"+dev)){
-                    $.ajax({
-                        type:"POST",
-                        url:"./20231211-Deletedb.php",
-                        data:{flist:dev},
-                        success:showdelete,
-                        error:function(){
-                            alert("刪除失敗!");
-                        }
-                    });
-                }
+                } else {
+                    if (confirm("確定要刪除" + dev)) {
+                        $.ajax({
+                            type: "POST",
+                            url: "./20231211-Deletedb.php",
+                            data: { flist: dev },
+                            success: showdelete,
+                            error: function () {
+                                alert("刪除失敗!");
+                            }
+                        });
+                    }
                 }
             });
 
             //修改電話
-            $("#telOK_btn").bind("click",function(){
+            $("#telOK_btn").bind("click", function () {
                 let dev = $("#newlistname1").val();
-                let tel =  $("#uptel").val();
-                console.log(typeof tel,tel);
-                if(dellist.indexOf(dev) == -1){
+                let tel = $("#uptel").val();
+                console.log(typeof tel, tel);
+                if (dellist.indexOf(dev) == -1) {
                     alert("無此訂單");
-                }else{
-                    if(confirm("修改電話為:"+tel)){
+                } else {
+                    if (confirm("修改電話為:" + tel)) {
                         $.ajax({
-                            type:"POST",
-                            url:"./20231211-Updatadb.php",
-                            data:{flist:dev,ftel:tel},
-                            success:showtel,
-                            error:function(){
+                            type: "POST",
+                            url: "./20231211-Updatadb.php",
+                            data: { flist: dev, ftel: tel },
+                            success: showtel,
+                            error: function () {
                                 alert("修改失敗");
                             }
                         });
                     }
-                    
                 }
-                
-
             });
 
             //修改數量
-            $("#contOK_btn").bind("click",function(){
+            $("#contOK_btn").bind("click", function () {
                 // console.log($("#newlistname1").val());
                 let dev = $("#newlistname2").val();
                 let cont = $("#upcont").val();
-                let upmon = cont*500;
-                if(dellist.indexOf(dev) == -1){
+                let upmon = cont * 500;
+                if (dellist.indexOf(dev) == -1) {
                     alert("無此訂單");
-                }else{
-                    if(confirm("修改數量為:"+cont)){
-                        alert("金額為:"+upmon);
+                } else {
+                    if (confirm("修改數量為:" + cont)) {
+                        alert("金額為:" + upmon);
                         $.ajax({
-                            type:"POST",
-                            url:"./20231211-Updatadb2.php",
-                            data:{flist:dev,fcont:cont,fmon:upmon},
-                            success:showtel,
-                            error:function(){
+                            type: "POST",
+                            url: "./20231211-Updatadb2.php",
+                            data: { flist: dev, fcont: cont, fmon: upmon },
+                            success: showtel,
+                            error: function () {
                                 alert("修改失敗");
                             }
                         });
                     }
-                    
                 }
-                
-
             });
         });
 
+        //修改地址
+        $("#addOK_btn").bind("click", function () {
+            let dev = $("#newlistname3").val();
+            let add = $("#upadd").val();
+            console.log(typeof add, add);
+            if (dellist.indexOf(dev) == -1) {
+                alert("無此訂單");
+            } else {
+                if (confirm("修改地址為:" + add)) {
+                    $.ajax({
+                        type: "POST",
+                        url: "./20231211-Updatadb3.php",
+                        data: { flist: dev, fadd: add },
+                        success: showadd,
+                        error: function () {
+                            alert("修改失敗");
+                        }
+                    });
+                }
+            }
+        });
 
-        let dellist=[];
-        function showdata(data){
+        let dellist = [];
+        function showdata(data) {
             // console.log(data);
             $("#show").empty();
-            data.forEach(function(item){
+            data.forEach(function (item) {
                 dellist.push(item.flist);
                 // console.log(item.flist);
-                let strhtml = '<tr><td id="fulist" data-th="訂單編號">'+item.flist+'</td><td id="fudate" data-th="訂購日期">'+item.fdate+'</td><td id="futel" data-th="電話">'+item.ftel+'</td><td id="fadd" data-th="地址">'+item.fadd+'</td><td id="fruit" data-th="訂單內容">'+item.fcont+'箱</td><td id="monmon" data-th="總金額">'+item.fmon+'</td></tr>';
+                let strhtml = '<tr><td id="fulist" data-th="訂單編號">' + item.flist + '</td><td id="fudate" data-th="訂購日期">' + item.fdate + '</td><td id="futel" data-th="電話">' + item.ftel + '</td><td id="fadd" data-th="地址">' + item.fadd + '</td><td id="fruit" data-th="訂單內容">' + item.fcont + '箱</td><td id="monmon" data-th="總金額">' + item.fmon + '</td></tr>';
                 $("#show").append(strhtml);
             });
         }
 
         //刪除
-        function showdelete(){
+        function showdelete() {
             console.log("OK");
             alert("刪除成功");
-            location.href="./login.html";
+            location.href = "./login.html";
         }
         //修改電話
-        function showtel(){
+        function showtel() {
             console.log("OK");
             alert("修改成功");
-            location.href="./login.html";
+            location.href = "./login.html";
         }
         //修改數量
-        function showcont(){
+        function showcont() {
+            console.log("OK");
+            alert("修改成功");
+            location.href = "./login.html";
+        }
+        //修改地址
+        function showadd(){
             console.log("OK");
             alert("修改成功");
             location.href="./login.html";
         }
+
     </script>
 </body>
 
