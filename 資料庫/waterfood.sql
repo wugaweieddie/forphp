@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2023-12-20 16:23:52
+-- 產生時間： 2023-12-27 14:21:55
 -- 伺服器版本： 10.4.28-MariaDB
 -- PHP 版本： 8.0.28
 
@@ -50,6 +50,7 @@ CREATE TABLE `food` (
   `flist` varchar(32) NOT NULL COMMENT '訂單編號',
   `fdate` timestamp NOT NULL DEFAULT current_timestamp() COMMENT '訂單日期',
   `ftel` varchar(32) NOT NULL COMMENT '訂單電話',
+  `fadd` varchar(50) NOT NULL COMMENT '訂單住址',
   `fcont` varchar(32) NOT NULL COMMENT '訂單內容',
   `fmon` varchar(32) NOT NULL COMMENT '訂單金額'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -58,15 +59,11 @@ CREATE TABLE `food` (
 -- 傾印資料表的資料 `food`
 --
 
-INSERT INTO `food` (`ID`, `flist`, `fdate`, `ftel`, `fcont`, `fmon`) VALUES
-(30, '20231220134744', '2023-12-20 05:47:49', '11', '1', '500'),
-(31, '20231220134750', '2023-12-20 05:47:54', '12121212', '12', '6000'),
-(32, '20231220134755', '2023-12-20 05:48:02', '123123123', '55', '27500'),
-(33, '20231220145048', '2023-12-20 06:50:53', '', '', '0'),
-(34, '2023122014524', '2023-12-20 06:52:18', '', '', '0'),
-(36, '20231220155737', '2023-12-20 07:57:48', '', '1', '500'),
-(37, '20231220155959', '2023-12-20 08:00:04', '', '12', '6000'),
-(38, '2023122016535', '2023-12-20 08:05:43', '', '', '0');
+INSERT INTO `food` (`ID`, `flist`, `fdate`, `ftel`, `fadd`, `fcont`, `fmon`) VALUES
+(46, '20231225203413', '2023-12-25 12:34:23', '123465798', '中離路', '12', '6000'),
+(49, '2023122610112', '2023-12-26 02:33:42', '09774548745', '台中市忠工路50號', '12', '6000'),
+(50, '2023122713826', '2023-12-27 05:08:36', '123', '159', '10', '5000'),
+(51, '20231227132933', '2023-12-27 05:29:42', '159', '159', '10', '5000');
 
 --
 -- 已傾印資料表的索引
@@ -92,7 +89,7 @@ ALTER TABLE `food`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `food`
 --
 ALTER TABLE `food`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT '編號', AUTO_INCREMENT=39;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT '編號', AUTO_INCREMENT=52;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

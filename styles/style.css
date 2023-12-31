@@ -498,7 +498,6 @@ html .main3 .my-3 .attention-area .toptext ul li span, body .main3 .my-3 .attent
   color: var(--mycolor14);
 }
 html .main3 .my-2 .row .mb-3 .card, body .main3 .my-2 .row .mb-3 .card {
-  border: 2px solid var(--mycolor13);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.7));
 }
 html .main3 .my-2 .row .mb-3 .card .card-head, body .main3 .my-2 .row .mb-3 .card .card-head {
@@ -538,9 +537,10 @@ html .main3 .my-2 .row .mb-3 .card .card-footer, body .main3 .my-2 .row .mb-3 .c
   text-align: center;
 }
 html .main3 .my-2 .row .mb-3 .card:hover, body .main3 .my-2 .row .mb-3 .card:hover {
-  box-shadow: 5px 5px 5px black;
-  transform: skew(-2deg);
+  box-shadow: -5px 5px 2px yellow;
+  transform: translate(5px, -5px);
   transition: 0.3s;
+  border: 2px solid var(--mycolor13);
 }
 html .main4, body .main4 {
   background: linear-gradient(160deg, var(--mycolor1), var(--mycolor12));
@@ -625,6 +625,11 @@ html .main4 .container .sectionIII .cards, body .main4 .container .sectionIII .c
 html .main4 .container .sectionIII .cards:hover, body .main4 .container .sectionIII .cards:hover {
   animation-play-state: paused;
 }
+html .main4 .container .sectionIII .cards .cartcontent:hover, body .main4 .container .sectionIII .cards .cartcontent:hover {
+  transform: scale(0.95);
+  transition: 0.2s;
+  box-shadow: 0px 0px 10px lightcyan;
+}
 html .main4 .container .sectionIII .cards .cartcontent .card .card-head, body .main4 .container .sectionIII .cards .cartcontent .card .card-head {
   display: flex;
   flex-direction: row;
@@ -642,7 +647,7 @@ html .main4 .container .sectionIII .cards .cartcontent .card .card-head h4, body
   }
 }
 html .main5, body .main5 {
-  background: linear-gradient(330deg, var(--mycolor8), var(--mycolor12));
+  background-image: url(../images/pbac.png);
   padding-bottom: 3%;
 }
 html .main5 .banner, body .main5 .banner {
@@ -683,8 +688,21 @@ html .main5 .container .row .col-md-8 .iframes-imges a img:hover, body .main5 .c
 html .main5 .container .row .col-md-8 .iframes-imges a:hover, body .main5 .container .row .col-md-8 .iframes-imges a:hover {
   opacity: 0.7;
 }
+html .main5 .container .row .col-md-4, body .main5 .container .row .col-md-4 {
+  height: 340px;
+  padding-top: 1rem;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+}
+html .main5 .container .row .col-md-4 .mytext p, body .main5 .container .row .col-md-4 .mytext p {
+  color: white;
+  font-size: 1.2rem;
+}
 html .main5 .container .row .col-md-4 .mytext h3, body .main5 .container .row .col-md-4 .mytext h3 {
   border-bottom: 3px solid red;
+}
+html .main5 .container .row .col-md-4 .form-group label, body .main5 .container .row .col-md-4 .form-group label {
+  color: white;
 }
 html .main6 .container .row #visitor, body .main6 .container .row #visitor {
   font-weight: bolder;
@@ -784,7 +802,7 @@ html .footer p, body .footer p {
     display: none !important;
   }
   .main5 .container .row .col-md-8 .iframes {
-    height: 80vw !important;
+    display: none !important;
   }
   .main6 .container .row table thead {
     display: none;

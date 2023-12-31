@@ -170,8 +170,9 @@
             // console.log(typeof flistpos, flistpos);
             $("#show").empty();
             let strhtml = '<tr><td id="fulist" data-th="訂單編號">' + data[flistpos].flist + '</td><td id="fudate" data-th="訂購日期">' + data[flistpos].fdate + '</td><td id="futel" data-th="電話">' + data[flistpos].ftel + '</td><td id="fadd" data-th="地址">' + data[flistpos].fadd + '</td><td id="fruit" data-th="訂單內容">' + data[flistpos].fcont + '箱</td><td id="monmon" data-th="總金額">' + data[flistpos].fmon + '</td></tr>';
-
             $("#show").html(strhtml);
+            let userlist = '<i class="fa-solid fa-user"></i>訂單'+data[flistpos].flist+'的朋友歡迎回來';
+            $("#visitor").html(userlist);
         }
 
 
