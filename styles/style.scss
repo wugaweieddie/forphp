@@ -782,7 +782,7 @@ html,body {
                 .cards {
                     display: flex;
                     flex-wrap: nowrap;
-                    animation: marquee 20s linear infinite;
+                    animation: marquee 50s linear infinite;
 
                     &:hover {
                         animation-play-state: paused;
@@ -810,11 +810,11 @@ html,body {
 
                 @keyframes marquee {
                     0% {
-                        transform: translateX(0);
+                        transform: translateX(100%);
                     }
 
                     100% {
-                        transform: translateX(-100%);
+                        transform: translateX(-500%);
                     }
                 }
             }
@@ -1110,6 +1110,13 @@ html,body {
                     display: none !important;
                 }
             }
+            .sectionIII{
+                .cards {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    animation: marquee 50s linear infinite;
+                }
+            }
         }
     }
     // 購買頁面
@@ -1137,7 +1144,7 @@ html,body {
                             td{
                                 display: block;
                                 &::before{
-                                    content: attr(data-th) ":";
+                                    content: attr(data-th) "";
                                     color:var(--mycolor8);
                                     font-weight: 600;
                                     display: block;

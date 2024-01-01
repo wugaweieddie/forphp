@@ -620,7 +620,7 @@ html .main4 .container .sectionIII, body .main4 .container .sectionIII {
 html .main4 .container .sectionIII .cards, body .main4 .container .sectionIII .cards {
   display: flex;
   flex-wrap: nowrap;
-  animation: marquee 20s linear infinite;
+  animation: marquee 50s linear infinite;
 }
 html .main4 .container .sectionIII .cards:hover, body .main4 .container .sectionIII .cards:hover {
   animation-play-state: paused;
@@ -640,10 +640,10 @@ html .main4 .container .sectionIII .cards .cartcontent .card .card-head h4, body
 }
 @keyframes marquee {
   0% {
-    transform: translateX(0);
+    transform: translateX(100%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-500%);
   }
 }
 html .main5, body .main5 {
@@ -801,6 +801,11 @@ html .footer p, body .footer p {
   .main4 .container .sectionII .mid-r {
     display: none !important;
   }
+  .main4 .container .sectionIII .cards {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: marquee 50s linear infinite;
+  }
   .main5 .container .row .col-md-8 .iframes {
     display: none !important;
   }
@@ -811,7 +816,7 @@ html .footer p, body .footer p {
     display: block;
   }
   .main6 .container .row table tbody tr td::before {
-    content: attr(data-th) ":";
+    content: attr(data-th) "";
     color: var(--mycolor8);
     font-weight: 600;
     display: block;
